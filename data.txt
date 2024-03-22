@@ -1,0 +1,4 @@
+Monsgeek,M5,108,Full Size,129.99,Monsgeek,https://www.monsgeek.com/product/m5/
+Monsgeek,M3,87,TKL,109.99,Monsgeek,https://www.monsgeek.com/product/m3/
+Monsgeek,M2,98,1800 compact,109.99,Monsgeek,https://www.monsgeek.com/product/m2/
+idobao,IDOBAO ID80 V2 MX Mechanical Keyboard Barebone Kit,84,75%,179.00,idobao,https://idobao.net/products/idobao-id80v2-75-hot-swappable-mechanical-keyboard-kit

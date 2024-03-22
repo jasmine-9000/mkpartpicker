@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a part</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <h1><a href='/'>Builder</a></h1>
+        <h1><a href='#'>Products</a></h1>
+    </nav>
+    <hr>
+    <h1>Add a Part</h1>
+    <hr>
+    <form method="POST" action="/admin/add-part">
+        <div class="form-control">
+
+            <label for="type-of-part">Type of Part</label>
+            <select id="type-of-part" name="type-of-part">
+                <option value="lube">Lube</option>
+                <option value="chassis" >Chassis</option>
+                <option value="keycaps">Key Caps</option>
+                <option value="switches" selected="selected">Switches</option>
+                <option value="other">Other</option>             
+            </select>
+        </div>
+        <div class="form-control">
+            <label for="brand-name">Brand Name</label>
+            <input type="text" id="brand-name" name="brand-name" required>
+        </div>
+        <div class="form-control">
+            <label for="component-name">Component Name</label>
+            <input type="text" id="component-name" name="component-name">
+        </div>
+        <div class="form-control">
+            <label for="model_number">Model Number</label>
+            <input type="model_number" id="model_number" name="model_number">
+        </div>
+        <div id="chassis-options" class="hidden">
+
+            <div class="form-control">
+                <label for="number-of-keys">Number of Keys</label>
+                <input type="number" id="number-of-keys" name="number-of-keys">
+            </div>
+            <div class="form-control">
+                <!-- <label for="region">Region</label>
+                <select id="region" name="region">
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select> -->
+                <label for="keyboard_layout">Keyboard Layout</label>
+                <select id="keyboard_layout" name="keyboard_layout">
+                    <option value="US-ANSI">US - ANSI</option>
+                    <option value="ISO">ISO</option>
+                </select>
+                <label for="keyboard_size_name">Keyboard Size</label>
+                <select id="keyboard_size_name" name="keyboard_size_name">
+                    <option value="full-size">Full Size</option>
+                    <option value="tkl">Tenkeyless (TKL)</option>
+                    <option value="compact-60">Compact (60%)</option>
+                    <option value="compact-75">75%</option>
+                    <option value="compact-65">65%</option>
+                    <option value="compact-40">40%</option>
+                    <option value="1800">1800 layout</option>
+                    <hr>
+                    <option value="ortho">Ortho</option>
+                    <option value="alice-split">Alice layout (split layout)</option>
+                    <option value="macropad">Macropad</option>
+                    <option value="numpad">Numpad Only</option>
+                    <hr>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div id="switch-options">
+
+            <h1 style="float:right;">TODO: add more switch options</h1>
+            <div class="form-control">
+                <label for="quantity">Quantity of Key switches per Pack</label>
+                <input type="number" id="quantity" name="quantity">
+            </div>
+            <div class="form-control">
+                <label for="switch_type">Switch Type</label>
+                <select name="switch_type" id="switch_type">
+                    <option value="linear">Linear</option>
+                    <option value="tactile">Tactile</option>
+                    <option value="clicky">Clicky</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="switch_body_color">Body Color</label>
+                <input id="switch_body_color" type="text" name="switch_body_color">
+            </div>
+            <div class="form-control">
+                <label for="switch_stem_color">Stem Color</label>
+                <input id="switch_stem_color" type="text" name="switch_stem_color">
+            </div>
+            <div class="form-control">
+                <label for="see_through">RGB See Through?</label>
+                <input type="checkbox" name="see_through" id="see_through">
+                <label for="switch_pin_layout">Switch Pin Layout</label>
+                <select name="switch_pin_layout" id="switch_pin_layout">
+                    <option value="3-pin-MX-layout">3 Pin MX style Layout</option>
+                    <option value="5-pin-MX-layout">5 Pin MX style Layout</option>
+                    <option value="other-pin-layout">Other Pin Layout (unsupported)</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="keyswitch_profile">Key Switch Profile</label>
+                <select id="keyswitch_profile" name="keyswitch_profile">
+                    <option value="low_profile">Cherry MX Profile</option>
+                    <option value="low_profile">Low Profile</option>
+                </select>
+            </div>
+        </div>
+        <div id="lube-options" class="hidden">
+            <h1>TODO: add lube options</h1>
+        </div>
+        <div id="keycap-options" class="hidden">
+            <h1>TODO: add keycap options</h1>
+            <div class="form-control">
+                <label for="keycap_profile">Keycap Profile</label>
+                <select id="keycap_profile" name="keycap_profile">
+                    <option value="SA">SA</option>
+                    <option value="OEM">OEM</option>
+                    <option value="cherry">Cherry</option>
+                    <option value="XDA">XDA</option>
+                    <option value="DSA">DSA</option>
+                </select>
+                <div id="keycap-profile-details-on-selection" style="float:right;"></div>
+                <script>
+                    const detailContainer = document.getElementById('keycap-profile-details-on-selection')
+                    const keycapProfileSelection = document.getElementById('keycap_profile');
+                    class KeycapProfileDetails {
+                        constructor(textRepresentation) {
+                            this.txt = textRepresentation
+                            let l = this.txt.split(',')
+                            this.name = l[0]
+                            this.height = l[1]
+                            this.keycapshape = l[2]
+                            this.rowshape = l[3]
+                        }
+                    }
+                    const dict = {
+                        'SA': new KeycapProfileDetails('SA,High Profile, Angled and Concave,Sculpted'),
+                        'OEM': new KeycapProfileDetails('OEM,Medium Profile,Angled,Sculpted'),
+                        'cherry': new KeycapProfileDetails('Cherry,Medium Profile,Angled,Sculpted'),
+                        'XDA': new KeycapProfileDetails('XDA,Low Profile,Concave, Uniform'),
+                        'DSA': new KeycapProfileDetails('DSA,Low Profile,Concave, Uniform')
+                    }
+                    keycapProfileSelection.addEventListener('change', (e) => {
+                        const selection = dict[e.target.value];
+                        // console.log(dict[e.target.value])
+                        const detailString = `Keycap Type\tHeight\tKeycap Shape\tRow Shape<br>
+                                            ${selection.name}\t${selection.height}\t${selection.keycapshape}\t${selection.rowshape} 
+                                             `
+                        detailContainer.innerHTML = detailString;
+                    })
+                </script>
+            </div>
+        </div>
+        <div id="other-options" class="hidden">
+            <h1>TODO: add other part options</h1>
+        </div>
+        <div class="form-control">
+            <label for="price">Price</label>
+            <input type="number" min="1" step="any" id="price" name="price">
+        </div>
+        
+        <button type="submit">Add new part</button>
+    </form>
+</body>
+<script src="/scripts/admin-add-part.js"></script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Parts - MKPartPicker</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <h1><a href='/'>Builder</a></h1>
+        <h1><a href='#'>Products</a></h1>
+    </nav>
+    <hr>
+    <h1>Choose Your Parts</h1>
+    <h4>Compatibility filter is not implemented</h4>
+    <table>
+        <thead>
+            <td>Component</td>
+            <td>Selection</td>
+            <td>Base</td>
+            <td>Promo</td>
+            <td>Shipping</td>
+            <td>Tax</td>
+            <td>Price</td>
+            <td>Where</td>
+        </thead>
+        <tr id="chassis_container">
+            <td>Chassis </td>
+        </tr>
+        <tr id="switches_container">
+            <td>Switches</td>
+        </tr>
+        <tr id="keycaps_container">
+            <td>Key Caps</td>
+        </tr>
+    </table>
+    <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
+    <!-- <button onclick="setDummyCookie();">Meow</button> -->
+    <button onclick="clearCookies();">Clear cart</button>
+    <hr>
+    <h3>Admin functions</h3>
+    <p >
+
+        <a class="admin_button" href="/data/mongoose">See all chassis options in database</a><br>
+        <a class="admin_button" href="/data/switches">See all switch options in database</a><br>
+        <a class="admin_button" href="/admin/add-part">Add a new part</a>
+    </p>
+</body>
+<script src="scripts/script.js"></script>
+</html>

@@ -1,0 +1,3 @@
+Data format: 
+
+<brand name>,<full name>,<number of keys>,<keyboard layout>,<base price>,<vendor name>,<hyperlink>,<compatible switch types>
