@@ -40,9 +40,17 @@ window.onload = async () => {
         document.getElementById('switches_container').appendChild(add_button);
     }
     // load chosen keycap data from cookie id
-    const keycaps_selection_id = getCookie('keycaps_selection');
+    const keycaps_selection_id = getCookie('keycaps_selection')
     if(keycaps_selection_id !== null && keycaps_selection_id !== undefined) {
-        console.log('');
+        console.log();
+        const keycaps_response = await fetch(`/data/keycaps/${keycaps_selection_id}`);
+        if(keycaps_response.status !== 404) {
+            const keycaps_data = await keycaps_response.json()
+            loadDataIntoTableRow('keycaps_container', keycaps_data); 
+        } else {
+            alert('Could not find keycap data')
+        }
+        
     } else {
         const add_button = document.createElement('td');
         add_button.innerHTML = `<a class='add_button' href='keycaps_selection'>Add Key Caps</a>`
@@ -71,6 +79,7 @@ function clearCookies() {
     console.log("meowwww");
     document.cookie = 'chassis_selection=;Max-Age=0'
     document.cookie = 'switches_selection=;Max-Age=0'
+    document.cookie = 'keycaps_selection=;Max-Age=0'
     console.log(document.cookie)
 }
 

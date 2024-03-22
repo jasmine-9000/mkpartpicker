@@ -20,6 +20,7 @@ a.add_button {
     border-radius: 5px;
     font-weight:700;
     font-family: sans-serif;
+    width: fit-content;
 }
 a.admin_button {
     display:block;

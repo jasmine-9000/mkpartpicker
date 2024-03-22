@@ -7,7 +7,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://127.0.0.1:27017/mkpartpicker')
 const chassis_model = require('./models/chassis_model');
-const switches_model = require('./models/switches_model')
+const switches_model = require('./models/switches_model');
+const keycaps_model = require('./models/keycaps_model');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.get('/chassis_selection', (req, res) => {
@@ -65,22 +66,23 @@ app.get('/data/keycaps', async (req, res) => {
     //         }
     //     ]
     // }
-    const dummyData = [
-        {
-            _id: 'ABCD',
-            brand_name: 'Monsgeek',
-            component_name: 'Panda Keycap set',
-            hyperlink: 'https://google.com',
-            layouts_supported: [
-                'a',
-                'b',
-                'c'
-            ],
-            price: 39.99,
-            vendor_name: 'Monsgeek'
-        }
-    ]
-    res.json(dummyData)
+    // const dummyData = [
+    //     {
+    //         _id: 'ABCD',
+    //         brand_name: 'Monsgeek',
+    //         component_name: 'Panda Keycap set',
+    //         hyperlink: 'https://google.com',
+    //         layouts_supported: [
+    //             'a',
+    //             'b',
+    //             'c'
+    //         ],
+    //         price: 39.99,
+    //         vendor_name: 'Monsgeek'
+    //     }
+    // ]
+    const doc = await keycaps_model.find()
+    res.json(doc)
 })
 
 app.get('/data/mongoose/postnewdata/:name/:price', async(req, res) => {
@@ -101,6 +103,10 @@ app.get('/data/:chassis_id/', async (req, res) => {
 })
 app.get('/data/switches/:switch_id', async (req, res) => {
     const doc = await switches_model.findById(req.params.switch_id);
+    res.json(doc);
+})
+app.get('/data/keycaps/:keycap_id', async (req, res) => {
+    const doc = await keycaps_model.findById(req.params.keycap_id);
     res.json(doc);
 })
 
