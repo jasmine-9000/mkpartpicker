@@ -3,11 +3,11 @@ var universal_tax_rate = 0.0925
 var universal_promo = 0
 window.onload = async () => {
     // console.log("not implemented")
-    const response = await fetch('/data/switches');
+    const response = await fetch('/data/keycaps');
     const data  = await response.json();
     console.log(data);
-    const table = document.getElementById('keycaps-table')
-    data.forEach(dSwitch => {
+    const table = document.getElementById('keycap-table')
+    data.forEach(dKey => {
         const newRow = document.createElement('tr');
         const td1 = document.createElement('td');
         const td2 = document.createElement('td');
@@ -22,28 +22,27 @@ window.onload = async () => {
         const td11 = document.createElement('td');
         const td12 = document.createElement('td');
         const td13 = document.createElement('td');
-        const baseTotal = dSwitch.price
-        const pricePerSwitch = Math.round(Number(baseTotal) / Number(dSwitch.quantity) * 100) / 100
+
+        const baseTotal = dKey.price
+        // const pricePerSwitch = Math.round(Number(baseTotal) / Number(dKey.quantity) * 100) / 100
         const tax = Math.round(Number(baseTotal) * universal_tax_rate*100) / 100;
         const shipping = universal_shipping_cost;
         const promo = universal_promo;
-        td1.innerHTML = dSwitch.brand_name;
-        td2.innerText = dSwitch.component_name;
-        td3.innerText = dSwitch.style_of_switch;
-        td4.innerText = String(dSwitch.quantity);
-        td5.innerText = String(pricePerSwitch)
-        td6.innerText = String(dSwitch.price);
-        td7.innerText = String(tax)
-        td8.innerText = String(shipping);
-        td9.innerText = String(promo);
-        td10.innerText = String(Math.round((tax + baseTotal + shipping - promo)*100)/100);
-        td11.innerHTML= `<a href='${dSwitch.hyperlink}'>${dSwitch.vendor_name}</a>`
+        
+        td1.innerHTML = dKey.brand_name;
+        td2.innerText = dKey.component_name;
+        td3.innerText = String(dKey.price);
+        td4.innerText = String(tax)
+        td5.innerText = String(shipping);
+        td6.innerText = String(promo);
+        td7.innerText = String(Math.round((tax + baseTotal + shipping - promo)*100)/100);
+        td8.innerHTML= `<a href='${dKey.hyperlink}'>${dKey.vendor_name}</a>`
         let starDisplay = ''
         for(let i = 0; i < 5; i++) {
             starDisplay += '&#11088;'
         }
-        td12.innerHTML = starDisplay;
-        td13.innerHTML = `<a class='add_button' data-part-uuid='${dSwitch._id}' href='#'>Add</a>`
+        td9.innerHTML = starDisplay;
+        td10.innerHTML = `<a class='add_button' data-part-uuid='${dKey._id}' href='#'>Add</a>`
         newRow.appendChild(td1);
         newRow.appendChild(td2);
         newRow.appendChild(td3);

@@ -26,6 +26,7 @@ app.use(express.static('public'))
 
 app.get('/data', async (req, res) => {
     const doc = await chassis_model.find()
+    console.log(doc)
     res.json(doc)
     // fs.readFile(path.join(__dirname, 'data.txt'), 'utf-8', function(err, data) {
     //     if(err) {
@@ -57,7 +58,29 @@ app.get('/data/switches', async (req, res) => {
     res.json(doc)
 })
 app.get('/data/keycaps', async (req, res) => {
-    res.json({})
+    // const dummyData = {
+    //     [
+    //         {
+    //             brand_name: 'Monsgeek'
+    //         }
+    //     ]
+    // }
+    const dummyData = [
+        {
+            _id: 'ABCD',
+            brand_name: 'Monsgeek',
+            component_name: 'Panda Keycap set',
+            hyperlink: 'https://google.com',
+            layouts_supported: [
+                'a',
+                'b',
+                'c'
+            ],
+            price: 39.99,
+            vendor_name: 'Monsgeek'
+        }
+    ]
+    res.json(dummyData)
 })
 
 app.get('/data/mongoose/postnewdata/:name/:price', async(req, res) => {
