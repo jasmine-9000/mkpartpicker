@@ -10,6 +10,8 @@
     <nav>
         <h1><a href='/'>Builder</a></h1>
         <h1><a href='#'>Products</a></h1>
+        <h1><a href='#'>Guides</a></h1>
+        <h1><a href='#'>Completed Builds</a></h1>
     </nav>
     <hr>
     <h1>Choose Your Parts</h1>
@@ -18,11 +20,12 @@
         Shipping costs not included at this time<br>
         Promotion discounts not included at this time.
     </p>
-    <table>
+    <table class='builder-table'>
         <thead>
             <td>Component</td>
             <td>Selection</td>
             <td>Base</td>
+            <td>Quantity Needed</td>
             <td>Promo</td>
             <td>Shipping</td>
             <td>Tax</td>
@@ -38,12 +41,65 @@
         <tr id="keycaps_container">
             <td>Key Caps</td>
         </tr>
+        <tr id="custom_part_container">
+            <td>Custom</td>
+            <td>
+                <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
+            </td>
+        </tr>
     </table>
-    <div>
-        Base Total: <span id='base_total'>0.00</span><br>
-        Tax:        <span id='tax_total'>0.00</span><br>
-        Grand Total: <span id="grand_total">0.00</span><br>
+    <!-- w3 schools version of a modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h1 style="display:inline-block;">Add Custom Part</h1>
+            <span class="close" style="float:right;">&times;</span>
+            <form method="POST" action="/client/add-part">
+                <div class="form-control">
+                    <label for="custom_part_name">Part Name/Description</label>
+                    <input type='text' id="custom_part_name" name="custom_part_name">
+                </div>
+                <div class="form-control">
+                    <label for="custom_part_type">Part Type</label>
+                    <select name="custom_part_type" id="custom_part_type">
+                        <option value="custom">Custom</option>
+                        <option value="chassis">Chassis</option>
+                        <option value="lube">Lube</option>
+                        <option value="keycaps">Keycap set</option>
+                        <option value="switches">Switches</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="custom_part_hyperlink">Part URL: (optional)</label>
+                    <input type="text" name="custom_part_hyperlink" id="custom_part_hyperlink">
+                </div>
+                <div class="form-control">
+                    <label for="custom_part_price">Part Price: (optional)</label>
+                    <input type="number" name="custom_part_price" id="custom_part_price">
+                </div>
+                <button type="submit">Add Custom Part</button>
+                <button type="button" class="close">Cancel</button>
+            </form>
+        </div>
     </div>
+    <table class="total-table">
+        <tr>
+            <td>Base Total:</td>
+            <td id="base_total"></td>
+        </tr>
+        <tr>
+            <td>Tax:</td>
+            <td id="tax_total"></td>
+        </tr>
+        <tr>
+            <td>Grand Total:</td>
+            <td id="grand_total"></td>
+        </tr>
+    </table>
+    <!-- <div>
+        Base Total:&Tab; <span id='base_total'></span><br>
+        Tax:        &Tab;<span id='tax_total'></span><br>
+        Grand Total: <span id="grand_total"></span><br>
+    </div> -->
     <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
     <!-- <button onclick="setDummyCookie();">Meow</button> -->
     <button onclick="clearCookies();">Clear cart</button>
@@ -53,7 +109,9 @@
 
         <a class="admin_button" href="/data/mongoose">See all chassis options in database</a><br>
         <a class="admin_button" href="/data/switches">See all switch options in database</a><br>
-        <a class="admin_button" href="/admin/add-part">Add a new part</a>
+        <a class="admin_button" href="/admin/add-part">Add a new part</a><br>
+        <a class="admin_button" href="/admin/list-of-parts">See list of parts</a><br>
+        <a class="admin_button" href="#">Nuke server</a><br>
     </p>
 </body>
 <script src="scripts/script.js"></script>
