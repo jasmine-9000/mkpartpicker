@@ -78,3 +78,7 @@ a.admin_button {
     text-decoration: none;
     cursor:pointer;
 }
+
+.close.primary-close-button {
+    float:initial;
+}

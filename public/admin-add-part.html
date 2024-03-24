@@ -110,8 +110,9 @@
             <div class="form-control">
                 <label for="keyswitch_profile">Key Switch Profile</label>
                 <select id="keyswitch_profile" name="keyswitch_profile">
-                    <option value="low_profile">Cherry MX Profile</option>
+                    <option value="cherry_profile">Cherry MX Profile</option>
                     <option value="low_profile">Low Profile</option>
+                    <option value="other_profile">Other Profile</option>
                 </select>
             </div>
         </div>
@@ -168,7 +169,10 @@
             <label for="price">Price</label>
             <input type="number" min="1" step="any" id="price" name="price">
         </div>
-        
+        <div class="form-control">
+            <label for="hyperlink">Hyperlink</label>
+            <input type="text" id="hyperlink" name="hyperlink">
+        </div>
         <button type="submit">Add new part</button>
     </form>
 </body>

@@ -65,7 +65,8 @@
         <div class="modal-content">
             <h1 style="display:inline-block;">Add Custom Part</h1>
             <span class="close" style="float:right;">&times;</span>
-            <form method="POST" action="/client/add-part">
+            <!-- method="POST" action="/client/add-part" overridding this in javascript -->
+            <form id="add-custom-part-form">
                 <div class="form-control">
                     <label for="custom_part_name">Part Name/Description</label>
                     <input type='text' id="custom_part_name" name="custom_part_name">
@@ -89,7 +90,7 @@
                     <input type="number" name="custom_part_price" id="custom_part_price">
                 </div>
                 <button type="submit">Add Custom Part</button>
-                <button type="button" class="close">Cancel</button>
+                <button type="button" class="close primary-close-button">Cancel</button>
             </form>
         </div>
     </div>

@@ -9,6 +9,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mkpartpicker')
 const chassis_model = require('./models/chassis_model');
 const switches_model = require('./models/switches_model');
 const keycaps_model = require('./models/keycaps_model');
+const custom_part_model = require('./models/custom_part_model');
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.get('/chassis_selection', (req, res) => {
@@ -124,13 +125,37 @@ app.post('/admin/add-part', async (req,res) => {
         case 'chassis':
             console.log('meow')
             break;
-        case 'j':
+        case 'switches':
+            res.status(503).send('Internal Server Error: Not implemented');
+            break;
+        case 'lube':
+            res.status(503).send('Internal Server Error: Not implemented');
+            break;
+        case 'keycaps':
+            res.status(503).send('Internal Server Error: Not implemented');
+            break;
+        case 'other':
+            res.status(503).send('Internal Server Error: Not implemented');
             break;
         default:
+            res.status(503).send('Internal Server Error: Not implemented');
             break;
     }
     
-    res.redirect('/')
+})
+
+app.post('/client/add-part', async (req, res) => {
+    console.log(`Received request: `)
+    console.log(req.body)
+    const submittedPart = new custom_part_model({
+        part_name_description: req.body.custom_part_name, 
+        part_type: req.body.custom_part_type,
+        price:req.body.custom_part_price,
+        part_hyperlink:req.body.custom_part_hyperlink,
+    
+    })
+    const response = await submittedPart.save()
+    res.redirect('/');
 })
 
 

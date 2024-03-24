@@ -1,6 +1,7 @@
 var universal_shipping_cost = 0
 var universal_tax_rate = 0.0925
 var universal_promo = 0
+
 window.onload = async () => {
     // let partButtons = document.querySelectorAll('.add-part');
     // [...partButtons].forEach(button => {
@@ -15,6 +16,7 @@ window.onload = async () => {
     let modal = document.getElementById('myModal');
     let btn = document.getElementById('custom_part_button')
     let spans = document.querySelectorAll('.close')
+    const custom_part_form = document.getElementById('add-custom-part-form');
     btn.addEventListener('click', function() {
         modal.style.display="block"
     });
@@ -82,6 +84,37 @@ window.onload = async () => {
         add_button.innerHTML = `<a class='add_button' href='keycaps_selection'>Add Key Caps</a>`
         document.getElementById('keycaps_container').appendChild(add_button);
     }
+    // get custom parts
+
+    // add event listener for custom part add form
+    custom_part_form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        let kvpairs = []
+        const x = custom_part_form.elements
+        console.log(x);
+        [...x].forEach(element => {
+            if(element instanceof HTMLSelectElement ||
+                element instanceof HTMLInputElement) {
+
+                    kvpairs.push(encodeURIComponent(element.name)+'='+encodeURIComponent(element.value))
+            }
+        })
+        // console.log(kvpairs.join('&'));
+        fetch('/client/add-part', {
+
+            method: 'POST',
+            redirect: 'follow',
+            body: new URLSearchParams(kvpairs.join('&'))
+        }).then(response => {
+            // HTTP 301 response
+            // setCookie('custom_part', '', 14)
+        }).catch(err => {
+            alert('Error found. Check browser console for more details.');
+            console.info(err + " url: " + '/client/add-part')
+        })
+    })
+
     const totals = getTotal([chassis_data, switches_data, keycaps_data])
     document.querySelector('#base_total').innerText = totals[0].toFixed(2)
     document.querySelector('#tax_total').innerText = totals[1].toFixed(2);
