@@ -91,9 +91,9 @@ window.onload = async () => {
         e.preventDefault();
         
         let kvpairs = []
-        const x = custom_part_form.elements
-        console.log(x);
-        [...x].forEach(element => {
+        const custom_form_elements = custom_part_form.elements
+        console.log(custom_form_elements);
+        [...custom_form_elements].forEach(element => {
             if(element instanceof HTMLSelectElement ||
                 element instanceof HTMLInputElement) {
 
@@ -110,9 +110,12 @@ window.onload = async () => {
             // HTTP 301 response
             // setCookie('custom_part', '', 14)
         }).catch(err => {
-            alert('Error found. Check browser console for more details.');
             console.info(err + " url: " + '/client/add-part')
         })
+        let prevCustomParts = JSON.parse(localStorage.getItem('custom_parts'))
+        
+        
+
     })
 
     const totals = getTotal([chassis_data, switches_data, keycaps_data])

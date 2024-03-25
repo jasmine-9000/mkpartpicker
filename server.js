@@ -155,7 +155,7 @@ app.post('/client/add-part', async (req, res) => {
     
     })
     const response = await submittedPart.save()
-    res.redirect('/');
+    res.send('Successfully saved custom submission')
 })
 
 
