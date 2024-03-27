@@ -2,7 +2,6 @@ var universal_shipping_cost = 0
 var universal_tax_rate = 0.0925
 var universal_promo = 0
 window.onload = async () => {
-    // console.log("not implemented")
     const response = await fetch('/data/switches');
     const data  = await response.json();
     console.log(data);
@@ -66,7 +65,8 @@ window.onload = async () => {
         button.addEventListener('click', (e) => {
             e.preventDefault()
             // console.log(e.target.dataset.partUuid);
-            setCookie('switches_selection', e.target.dataset.partUuid,14);
+            // setCookie('switches_selection', e.target.dataset.partUuid,14);
+            localStorage.setItem('switches_selection', e.target.dataset.partUuid);
             window.location.href='/'
         })
     })

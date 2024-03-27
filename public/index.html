@@ -32,33 +32,36 @@
             <td>Price</td>
             <td>Where</td>
         </thead>
-        <tr id="chassis_container">
-            <td>Chassis </td>
-        </tr>
-        <tr id="switches_container">
-            <td>Switches</td>
-        </tr>
-        <tr id="keycaps_container">
-            <td>Key Caps</td>
-        </tr>
-        <tr id="custom_part_container">
-            <td>Custom</td>
-            <td>
-                <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="7" style="text-align: right;">Base Total:</td>
-            <td id="base_total"></td>
-        </tr>
-        <tr>
-            <td colspan="7" style="text-align: right;">Tax:</td>
-            <td id="tax_total"></td>
-        </tr>
-        <tr>
-            <td colspan="7" style="text-align: right;">Grand Total:</td>
-            <td id="grand_total"></td>
-        </tr>
+        <tbody id="builder-table-rows">
+
+            <tr id="chassis_container">
+                <td>Chassis </td>
+            </tr>
+            <tr id="switches_container">
+                <td>Switches</td>
+            </tr>
+            <tr id="keycaps_container">
+                <td>Key Caps</td>
+            </tr>
+            <tr id="custom_part_form_container">
+                <td>Custom</td>
+                <td>
+                    <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: right;">Base Total:</td>
+                <td id="base_total"></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: right;">Tax:</td>
+                <td id="tax_total"></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: right;">Grand Total:</td>
+                <td id="grand_total"></td>
+            </tr>
+        </tbody>
     </table>
     <!-- w3 schools version of a modal -->
     <div id="myModal" class="modal">
@@ -74,11 +77,11 @@
                 <div class="form-control">
                     <label for="custom_part_type">Part Type</label>
                     <select name="custom_part_type" id="custom_part_type">
-                        <option value="custom">Custom</option>
-                        <option value="chassis">Chassis</option>
-                        <option value="lube">Lube</option>
-                        <option value="keycaps">Keycap set</option>
-                        <option value="switches">Switches</option>
+                        <option value="Custom">Custom</option>
+                        <option value="Chassis">Chassis</option>
+                        <option value="Lube">Lube</option>
+                        <option value="Key Caps">Keycap set</option>
+                        <option value="Switches">Switches</option>
                     </select>
                 </div>
                 <div class="form-control">
@@ -104,7 +107,7 @@
     </div> -->
     <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
     <!-- <button onclick="setDummyCookie();">Meow</button> -->
-    <button onclick="clearCookies();">Clear cart</button>
+    <button onclick="clearCart();">Clear cart</button>
     <hr>
     <h3>Admin functions</h3>
     <p >
@@ -115,6 +118,27 @@
         <a class="admin_button" href="/admin/list-of-parts">See list of parts</a><br>
         <a class="admin_button" href="#">Nuke server</a><br>
     </p>
+    <div id="meow1">
+        <span id="meow2">1234<br></span>
+        <span id="meow3">9101112<br></span>
+        <span id="meow4">131415<br></span>
+    </div>
 </body>
 <script src="scripts/script.js"></script>
+<script>
+    // dummy script
+    function insertAfter(el, childdiv) {
+        childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling);
+    }
+
+    let parentdiv = document.querySelector('#meow1')
+    let childdiv = document.querySelector('#meow3')
+    let newdiv = document.createElement('span');
+    newdiv.id = 'NEW_ELEMENT'
+    newdiv.innerHTML = `NEW ELEMENT!!!!<br>`
+    // parentdiv.insertBefore(newdiv, childdiv);
+    // childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling)
+    insertAfter(newdiv, childdiv);
+    console.log(document.querySelector('#NEW_ELEMENT'));
+</script>
 </html>

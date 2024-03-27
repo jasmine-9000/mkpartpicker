@@ -65,7 +65,7 @@ window.onload = async () => {
         button.addEventListener('click', (e) => {
             e.preventDefault()
             // console.log(e.target.dataset.partUuid);
-            setCookie('keycaps_selection', e.target.dataset.partUuid,14);
+            localStorage.setItem('keycaps_selection', e.target.dataset.partUuid);
             window.location.href='/'
         })
     })

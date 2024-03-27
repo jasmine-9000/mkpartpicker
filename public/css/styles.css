@@ -47,6 +47,7 @@ a.admin_button {
 /* w3 schools interpretation of a modal */
 .modal {
     display:none;
+    /* display:block; enable this to debug  */ 
     position:fixed;
     z-index: 1;
     left:0;

@@ -72,7 +72,7 @@ window.onload = async () => {
         button.addEventListener('click', (e) => {
             e.preventDefault()
             console.log(e.target.dataset.partUuid);
-            setCookie('chassis_selection', e.target.dataset.partUuid,14);
+            localStorage.setItem('chassis_selection', e.target.dataset.partUuid);
             window.location.href='/'
         })
     })
