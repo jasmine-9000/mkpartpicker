@@ -3,6 +3,8 @@ var universal_shipping_cost = 0
 var universal_tax_rate = 0.0925
 var universal_promo = 0
 
+var isAdmin = false;
+
 // make interactions happen only after window loads
 window.onload = async () => {
     // document elements
@@ -54,7 +56,7 @@ window.onload = async () => {
             keyswitch_packs_needed_to_build = 1
         }
         switches_data.component_type = 'switches'
-
+        switches_data.quantity_needed = keyswitch_packs_needed_to_build;
         loadDataIntoTableRow('switches_container', switches_data, Math.ceil(keyswitch_packs_needed_to_build));
     } else {
         loadAddButtonIntoTableRow('switches_container', 'Add Switches');
@@ -152,6 +154,13 @@ window.onload = async () => {
     document.querySelector('#base_total').innerText = totals[0].toFixed(2)
     document.querySelector('#tax_total').innerText = totals[1].toFixed(2);
     document.querySelector('#grand_total').innerText = totals[4].toFixed(2);
+
+    const admin_box = document.getElementById('admin-container')
+    if(isAdmin) {
+        admin_box.classList.remove('hidden')
+    } else {
+        admin_box.classList.add('hidden');
+    }
 }
 
 
@@ -280,12 +289,22 @@ function loadAddButtonIntoTableRow(tableRowIdString, displaymessage) {
         case 'keycaps_container':
             href='keycaps_selection';
             break;
+        case 'custom_part_form_container':
         default:
             href='/'
             break;
     }
     add_button.innerHTML = `<a class='add_button' href='${href}'>${displaymessage}</a>`
-    document.getElementById(tableRowIdString).appendChild(add_button);
+    const rowElement = document.getElementById(tableRowIdString)
+    rowElement.appendChild(add_button);
+    // get the number of elements in the head row of the table. 
+    const parentTable = rowElement.parentElement
+
+    const numberOfElementsNecessary = 10// rowElement.parentElement.querySelector('thead').querySelector('tr').children.length; 
+    for(let i = 2; i < numberOfElementsNecessary; i++) {
+        const dummyElement = document.createElement('td');
+        rowElement.appendChild(dummyElement);
+    }
 }
 
 
@@ -295,10 +314,18 @@ function getTotal(arr){
     let shippingtotal = 0
     let promototal = 0
     arr.forEach(dataset => {
+        
+        // if(dataset.quantity) {
+        //     qty = dataset.quantity;
+        // }
         if(dataset !== undefined && dataset !== null) {
             console.log(dataset);
-            basetotal += dataset.price
-            taxtotal += dataset.price * universal_tax_rate
+            let qty = 1;
+            if(dataset.quantity_needed) {
+                qty = dataset.quantity_needed;
+            }
+            basetotal += dataset.price * qty
+            taxtotal += dataset.price * qty * universal_tax_rate
             // shippingtotal += universal_shipping_cost
             // promototal += universal_promo;
         }

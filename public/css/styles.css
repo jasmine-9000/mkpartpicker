@@ -42,6 +42,37 @@ nav ul.navigation--links li {
     padding: 10px 20px;
 }
 
+/* table styles */
+/* table {
+    border: 2px solid #e4e4e4;
+    border-radius: 5px;
+    padding: 5px 10px;
+} */
+tr {
+    padding-top:15px;
+    padding-bottom:15px;
+    /* border-bottom: 1px solid red; */
+}
+td {
+    
+    padding: 10px 10px;
+    border-bottom:1px solid #d8d8d8;
+}
+/* format keyboard total differently; it looks weird with lines*/
+.keyboard--total td {
+    border-bottom:none;
+}
+
+
+.builder-table {
+
+}
+.total-table {
+    
+}
+
+
+
 /* specific styles */
 
 a.add_button {
@@ -68,12 +99,6 @@ a.admin_button {
     background-color:rgb(209, 55, 55);
 }
 
-.builder-table {
-
-}
-.total-table {
-    
-}
 
 
 /* w3 schools interpretation of a modal */
