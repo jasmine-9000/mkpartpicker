@@ -7,122 +7,124 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <nav>
-        <h1><a href='/'>Builder</a></h1>
-        <h1><a href='#'>Products</a></h1>
-        <h1><a href='#'>Guides</a></h1>
-        <h1><a href='#'>Completed Builds</a></h1>
+    <nav class="navigation">
+        <ul class="navigation--links">
+
+            <li><a href='/'>Builder</a></li>
+            <li><a href='/products'>Products</a></li>
+            <li><a href='/guides'>Guides</a></li>
+            <li><a href='/completed-builds'>Completed Builds</a></li>
+        </ul>
     </nav>
     <hr>
-    <h1>Choose Your Parts</h1>
-    <p class="disclaimers" style="line-height:1.5; font-weight: 700;">
-        Compatibility filter is not implemented<br>
-        Shipping costs not included at this time<br>
-        Promotion discounts not included at this time.
-    </p>
-    <table class='builder-table'>
-        <thead>
-            <td>Component</td>
-            <td>Selection</td>
-            <td>Base</td>
-            <td>Quantity Needed</td>
-            <td>Promo</td>
-            <td>Shipping</td>
-            <td>Tax</td>
-            <td>Price</td>
-            <td>Where</td>
-        </thead>
-        <tbody id="builder-table-rows">
+    <main>
 
-            <tr id="chassis_container">
-                <td>Chassis </td>
-            </tr>
-            <tr id="switches_container">
-                <td>Switches</td>
-            </tr>
-            <tr id="keycaps_container">
-                <td>Key Caps</td>
-            </tr>
-            <tr id="custom_part_form_container">
-                <td>Custom</td>
-                <td>
-                    <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="7" style="text-align: right;">Base Total:</td>
-                <td id="base_total"></td>
-            </tr>
-            <tr>
-                <td colspan="7" style="text-align: right;">Tax:</td>
-                <td id="tax_total"></td>
-            </tr>
-            <tr>
-                <td colspan="7" style="text-align: right;">Grand Total:</td>
-                <td id="grand_total"></td>
-            </tr>
-        </tbody>
-    </table>
-    <!-- w3 schools version of a modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <h1 style="display:inline-block;">Add Custom Part</h1>
-            <span class="close" style="float:right;">&times;</span>
-            <!-- method="POST" action="/client/add-part" overridding this in javascript -->
-            <form id="add-custom-part-form">
-                <div class="form-control">
-                    <label for="custom_part_name">Part Name/Description</label>
-                    <input type='text' id="custom_part_name" name="custom_part_name">
-                </div>
-                <div class="form-control">
-                    <label for="custom_part_type">Part Type</label>
-                    <select name="custom_part_type" id="custom_part_type">
-                        <option value="Custom">Custom</option>
-                        <option value="Chassis">Chassis</option>
-                        <option value="Lube">Lube</option>
-                        <option value="Key Caps">Keycap set</option>
-                        <option value="Switches">Switches</option>
-                    </select>
-                </div>
-                <div class="form-control">
-                    <label for="custom_part_hyperlink">Part URL: (optional)</label>
-                    <input type="text" name="custom_part_hyperlink" id="custom_part_hyperlink">
-                </div>
-                <div class="form-control">
-                    <label for="custom_part_price">Part Price: (optional)</label>
-                    <input type="number" name="custom_part_price" id="custom_part_price">
-                </div>
-                <button type="submit">Add Custom Part</button>
-                <button type="button" class="close primary-close-button">Cancel</button>
-            </form>
+        <h1>Choose Your Parts</h1>
+        <p class="disclaimers" style="line-height:1.5; font-weight: 700;">
+            Compatibility filter is not implemented<br>
+            Shipping costs not included at this time<br>
+            Promotion discounts not included at this time.
+        </p>
+        <table class='builder-table'>
+            <thead>
+                <td>Component</td>
+                <td>Selection</td>
+                <td>Base</td>
+                <td>Quantity Needed</td>
+                <td>Promo</td>
+                <td>Shipping</td>
+                <td>Tax</td>
+                <td>Price</td>
+                <td>Where</td>
+            </thead>
+            <tbody id="builder-table-rows">
+                
+                <tr id="chassis_container">
+                    <td>Chassis </td>
+                </tr>
+                <tr id="switches_container">
+                    <td>Switches</td>
+                </tr>
+                <tr id="keycaps_container">
+                    <td>Key Caps</td>
+                </tr>
+                <tr id="custom_part_form_container">
+                    <td>Custom</td>
+                    <td>
+                        <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right;">Base Total:</td>
+                    <td id="base_total"></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right;">Tax:</td>
+                    <td id="tax_total"></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: right;">Grand Total:</td>
+                    <td id="grand_total"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- w3 schools version of a modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h1 style="display:inline-block;">Add Custom Part</h1>
+                <span class="close" style="float:right;">&times;</span>
+                <!-- method="POST" action="/client/add-part" overridding this in javascript -->
+                <form id="add-custom-part-form">
+                    <div class="form-control">
+                        <label for="custom_part_name">Part Name/Description</label>
+                        <input type='text' id="custom_part_name" name="custom_part_name">
+                    </div>
+                    <div class="form-control">
+                        <label for="custom_part_type">Part Type</label>
+                        <select name="custom_part_type" id="custom_part_type">
+                            <option value="Custom">Custom</option>
+                            <option value="Chassis">Chassis</option>
+                            <option value="Lube">Lube</option>
+                            <option value="Key Caps">Keycap set</option>
+                            <option value="Switches">Switches</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="custom_part_hyperlink">Part URL: (optional)</label>
+                        <input type="text" name="custom_part_hyperlink" id="custom_part_hyperlink">
+                    </div>
+                    <div class="form-control">
+                        <label for="custom_part_price">Part Price: (optional)</label>
+                        <input type="number" name="custom_part_price" id="custom_part_price">
+                    </div>
+                    <button type="submit">Add Custom Part</button>
+                    <button type="button" class="close primary-close-button">Cancel</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <!-- <table class="total-table">
-        
-    </table> -->
-    <!-- <div>
-        Base Total:&Tab; <span id='base_total'></span><br>
-        Tax:        &Tab;<span id='tax_total'></span><br>
-        Grand Total: <span id="grand_total"></span><br>
-    </div> -->
-    <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
-    <!-- <button onclick="setDummyCookie();">Meow</button> -->
-    <button onclick="clearCart();">Clear cart</button>
-    <hr>
-    <h3>Admin functions</h3>
-    <p >
+        <!-- <table class="total-table">
+            
+        </table> -->
+        <!-- <div>
+            Base Total:&Tab; <span id='base_total'></span><br>
+            Tax:        &Tab;<span id='tax_total'></span><br>
+            Grand Total: <span id="grand_total"></span><br>
+        </div> -->
+        <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
+        <!-- <button onclick="setDummyCookie();">Meow</button> -->
+        <button onclick="clearCart();">Clear cart</button>
+        <hr>
+        <h3>Admin functions</h3>
+        <p >
+            
+            <a class="admin_button" href="/data/mongoose">See all chassis options in database</a><br>
+            <a class="admin_button" href="/data/switches">See all switch options in database</a><br>
+            <a class="admin_button" href="/admin/add-part">Add a new part</a><br>
+            <a class="admin_button" href="/admin/list-of-parts">See list of parts</a><br>
+            <a class="admin_button" href="#">Nuke server</a><br>
+        </p>
 
-        <a class="admin_button" href="/data/mongoose">See all chassis options in database</a><br>
-        <a class="admin_button" href="/data/switches">See all switch options in database</a><br>
-        <a class="admin_button" href="/admin/add-part">Add a new part</a><br>
-        <a class="admin_button" href="/admin/list-of-parts">See list of parts</a><br>
-        <a class="admin_button" href="#">Nuke server</a><br>
-    </p>
-    <div id="meow1">
-        <span id="meow2">1234<br></span>
-        <span id="meow3">9101112<br></span>
-        <span id="meow4">131415<br></span>
-    </div>
+    </main>
 </body>
 <script src="scripts/script.js"></script>
 <script>
@@ -130,15 +132,17 @@
     function insertAfter(el, childdiv) {
         childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling);
     }
+    function dummyScript() {
 
-    let parentdiv = document.querySelector('#meow1')
-    let childdiv = document.querySelector('#meow3')
-    let newdiv = document.createElement('span');
-    newdiv.id = 'NEW_ELEMENT'
-    newdiv.innerHTML = `NEW ELEMENT!!!!<br>`
-    // parentdiv.insertBefore(newdiv, childdiv);
-    // childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling)
-    insertAfter(newdiv, childdiv);
-    console.log(document.querySelector('#NEW_ELEMENT'));
+        let parentdiv = document.querySelector('#meow1')
+        let childdiv = document.querySelector('#meow3')
+        let newdiv = document.createElement('span');
+        newdiv.id = 'NEW_ELEMENT'
+        newdiv.innerHTML = `NEW ELEMENT!!!!<br>`
+        // parentdiv.insertBefore(newdiv, childdiv);
+        // childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling)
+        insertAfter(newdiv, childdiv);
+        console.log(document.querySelector('#NEW_ELEMENT'));
+    } 
 </script>
 </html>

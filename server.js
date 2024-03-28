@@ -24,6 +24,18 @@ app.get('/keycaps_selection', (req, res) => {
     const fp = path.join(path.join(__dirname, 'public/keycap_selection.html'))
     res.sendFile(fp)
 })
+app.get('/completed-builds', (req, res) => {
+    const fp = path.join(path.join(__dirname, 'public/completed_builds.html'))
+    res.sendFile(fp)
+})
+app.get('/guides', (req, res) => {
+    const fp = path.join(path.join(__dirname, 'public/mechanical_keyboard_guides.html'))
+    res.sendFile(fp)
+})
+app.get('/products', (req, res) => {
+    const fp = path.join(path.join(__dirname, 'public/list_of_products.html'))
+    res.sendFile(fp)
+})
 app.use(express.static('public'))
 
 app.get('/data', async (req, res) => {

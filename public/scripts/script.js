@@ -81,13 +81,13 @@ window.onload = async () => {
         console.log('Part data found. Loading now...')
         console.log(custom_part_data);
         let idx = 0
-        for(const part of custom_part_data) {
+        for(let part of custom_part_data) {
             // const first_item = custom_part_data[0];
             console.log(part);        
             const new_row = document.createElement('tr');
             new_row.id = 'custom-part-'+String(idx) // ('id', 'custom-part');
             // custom_part_container.appendChild(new_row);
-            
+            part.price = Number(part.custom_part_price);
             document.querySelector('#builder-table-rows').insertBefore(new_row, document.querySelector('#custom_part_form_container'));
             loadDataIntoCustomTableRow('custom-part-'+String(idx), part)
             idx += 1
@@ -148,7 +148,7 @@ window.onload = async () => {
 
     })
 
-    const totals = getTotal([chassis_data, switches_data, keycaps_data])
+    const totals = getTotal([chassis_data, switches_data, keycaps_data].concat(custom_part_data))
     document.querySelector('#base_total').innerText = totals[0].toFixed(2)
     document.querySelector('#tax_total').innerText = totals[1].toFixed(2);
     document.querySelector('#grand_total').innerText = totals[4].toFixed(2);
@@ -224,7 +224,7 @@ function loadDataIntoCustomTableRow(tableRowIdString, dataDict, quantity=1) {
     container.appendChild(td7)
     container.appendChild(td8)
     container.appendChild(td9)
-    container.appendChild(td10)
+    container.appendChild(td10);
 }
 function loadDataIntoTableRow(tableRowIdString, dataDict, quantity=1) {
         console.log(tableRowIdString);
@@ -296,6 +296,7 @@ function getTotal(arr){
     let promototal = 0
     arr.forEach(dataset => {
         if(dataset !== undefined && dataset !== null) {
+            console.log(dataset);
             basetotal += dataset.price
             taxtotal += dataset.price * universal_tax_rate
             // shippingtotal += universal_shipping_cost
