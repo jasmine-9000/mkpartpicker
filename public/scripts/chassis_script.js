@@ -44,6 +44,7 @@ window.onload = async () => {
         let td8 = document.createElement('td')
         let td9 = document.createElement('td')
         let td10 = document.createElement('td')
+        let td11 = document.createElement('td')
         td1.innerText = c.brand_name
         td2.innerText = c.component_name
         td3.innerText = c.number_of_keys
@@ -53,7 +54,14 @@ window.onload = async () => {
         td7.innerText = String(shipping_for_all_vendors.toFixed(2))
         td8.innerText = (c.price*(1+0.0925)+shipping_for_all_vendors).toFixed(2)
         td9.innerHTML = `<a href='${c.hyperlink}'>${c.vendor_name}</a>`
-        td10.innerHTML = `<a class='add_button' data-part-uuid='${c._id}' href='#'>Add</a>`
+        console.log(`Star rating: ${c.star_rating}`)
+        const star_rating = c.star_rating ? c.star_rating : 0;
+        let starDisplay = ''
+        for(let i = 0; i < star_rating; i++) {
+            starDisplay += '&#11088;'
+        }
+        td10.innerHTML = starDisplay;
+        td11.innerHTML = `<a class='add_button' data-part-uuid='${c._id}' href='#'>Add</a>`
         tr.appendChild(td1)
         tr.appendChild(td2)
         tr.appendChild(td3)
@@ -64,6 +72,7 @@ window.onload = async () => {
         tr.appendChild(td8)
         tr.appendChild(td9)
         tr.appendChild(td10)
+        tr.appendChild(td11)
         mt.appendChild(tr)
 
     })

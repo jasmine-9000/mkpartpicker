@@ -3,7 +3,9 @@ var universal_shipping_cost = 0
 var universal_tax_rate = 0.0925
 var universal_promo = 0
 
-var isAdmin = false;
+var isAdmin = true;
+var isDebuggingLoadScreen = false;
+
 
 // make interactions happen only after window loads
 window.onload = async () => {
@@ -161,6 +163,19 @@ window.onload = async () => {
     } else {
         admin_box.classList.add('hidden');
     }
+
+    // if everything is loaded, remove display message, and 
+    if(!isDebuggingLoadScreen){
+
+        [...document.querySelector('tbody').children].forEach(tr => {
+            if(tr.id !== 'message_display_container') {
+                tr.classList.remove('hidden')
+            } else {
+                tr.classList.add('hidden')
+            }
+        })
+    }
+
 }
 
 

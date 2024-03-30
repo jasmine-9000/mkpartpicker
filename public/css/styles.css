@@ -48,6 +48,9 @@ nav ul.navigation--links li {
     border-radius: 5px;
     padding: 5px 10px;
 } */
+table {
+    border-spacing:0px;
+}
 tr {
     padding-top:15px;
     padding-bottom:15px;

@@ -69,7 +69,8 @@ app.get('/data/mongoose', async (req, res) => {
 })
 app.get('/data/switches', async (req, res) => {
     const doc = await switches_model.find();
-    res.json(doc)
+    console.log(doc);
+    res.json(doc);
 })
 app.get('/data/keycaps', async (req, res) => {
     // const dummyData = {
@@ -131,14 +132,54 @@ app.post('/admin/add-part', async (req,res) => {
     res.cookie
     console.log("submitted request")
     console.log(req.body)
-    const c = req.body['type_of_part']
+    const c = req.body['type-of-part']
 
     switch(c) {
         case 'chassis':
             console.log('meow')
+            const chassis_doc = new chassis_model({
+                brand_name: req.body['brand-name'], 
+                component_name: req.body['component-name'],
+                model_number: req.body['model_number'],
+                number_of_keys: Number(req.body['number-of-keys']),
+                keyboard_layout: req.body['keyboard_layout'],
+                keyboard_size: req.body['keyboard_size_name'],
+                price:Number(req.body['price']),
+                vendor_name: req.body['vendor_name'],
+                hyperlink:req.body['hyperlink'],
+                star_rating:5
+            })
+            const c_response = await chassis_doc.save()
+            if(c_response === chassis_doc){ 
+                res.status(200).send('Successful')
+            } else {
+                res.status(400).send('HTTP 400 Bad Form Request')
+            }
             break;
         case 'switches':
-            res.status(503).send('Internal Server Error: Not implemented');
+            const doc = new switches_model({
+                brand_name: req.body['brand-name'], 
+                component_name: req.body['component-name'],
+                model_number: req.body['model_number'],
+                style_of_switch: req.body['switch_type'],
+                body_color: req.body['switch_body_color'],
+                stem_color: req.body['switch_stem_color'],
+                rgb_see_through: Boolean(req.body['see_through']),
+                pinout: req.body['switch_pin_layout'],
+                quantity: Number(req.body['quantity']),
+                price:Number(req.body['price']),
+                vendor_name: req.body['vendor_name'],
+                hyperlink:req.body['hyperlink'],
+                star_rating:5
+            })
+            const response = await doc.save();
+            console.log('Mongoose response: ')
+            console.log(response);
+            if(response === doc) {
+                res.status(200).send('Successful')
+            } else {
+                res.status(400).send('Internal Server Error: Bad Form Request');
+            }
             break;
         case 'lube':
             res.status(503).send('Internal Server Error: Not implemented');
@@ -150,6 +191,7 @@ app.post('/admin/add-part', async (req,res) => {
             res.status(503).send('Internal Server Error: Not implemented');
             break;
         default:
+            console.log(c);
             res.status(503).send('Internal Server Error: Not implemented');
             break;
     }

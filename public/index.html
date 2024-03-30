@@ -39,36 +39,39 @@
                 <td></td>
             </thead>
             <tbody id="builder-table-rows">
-                
-                <tr id="chassis_container">
-                    <td>Chassis </td>
+                <tr id="message_display_container">
+                    <td id="message_display_container" colspan="10">Loading...</td>
                 </tr>
-                <tr id="switches_container">
+                <tr id="chassis_container" class="hidden">
+                    <td>Chassis </td>
+                    
+                </tr>
+                <tr id="switches_container" class="hidden">
                     <td>Switches</td>
                 </tr>
-                <tr id="keycaps_container">
+                <tr id="keycaps_container" class="hidden">
                     <td>Key Caps</td>
                 </tr>
-                <tr id="custom_part_form_container">
+                <tr id="custom_part_form_container" class="hidden">
                     <td>Custom</td>
                     <td>
                         <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
                     </td>
                     <td colspan="8"></td>
                 </tr>
-                <tr class="keyboard--total">
+                <tr class="keyboard--total hidden">
                     <td colspan="7" style="text-align: right;">Base Total:</td>
                     <td id="base_total"></td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr class="keyboard--total">
+                <tr class="keyboard--total hidden">
                     <td colspan="7" style="text-align: right;">Tax:</td>
                     <td id="tax_total"></td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr class="keyboard--total">
+                <tr class="keyboard--total hidden">
                     <td colspan="7" style="text-align: right;">Grand Total:</td>
                     <td id="grand_total"></td>
                     <td></td>
@@ -103,7 +106,7 @@
                     </div>
                     <div class="form-control">
                         <label for="custom_part_price">Part Price: (optional)</label>
-                        <input type="number" name="custom_part_price" id="custom_part_price">
+                        <input type="number" name="custom_part_price" id="custom_part_price" step="0.01">
                     </div>
                     <button type="submit">Add Custom Part</button>
                     <button type="button" class="close primary-close-button">Cancel</button>
