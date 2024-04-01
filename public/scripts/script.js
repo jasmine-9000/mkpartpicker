@@ -5,7 +5,7 @@ var universal_promo = 0
 
 var isAdmin = true;
 var isDebuggingLoadScreen = false;
-
+var isDebuggingModalScreen = false; 
 
 // make interactions happen only after window loads
 window.onload = async () => {
