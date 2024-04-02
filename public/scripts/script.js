@@ -5,7 +5,7 @@ var universal_promo = 0
 
 var isAdmin = true;
 var isDebuggingLoadScreen = false;
-var isDebuggingModalScreen = false; 
+var isDebuggingModalScreen = true; 
 
 // make interactions happen only after window loads
 window.onload = async () => {
@@ -163,6 +163,9 @@ window.onload = async () => {
     } else {
         admin_box.classList.add('hidden');
     }
+    if(isDebuggingModalScreen) {
+        document.querySelector('#myModal').style.display = 'block';
+    }
 
     // if everything is loaded, remove display message, and 
     if(!isDebuggingLoadScreen){
@@ -271,7 +274,7 @@ function loadDataIntoTableRow(tableRowIdString, dataDict, quantity=1) {
         const td7 = document.createElement('td')
         const td8 = document.createElement('td')
         const td9 = document.createElement('td');
-        td1.innerText = `${dataDict.brand_name} ${dataDict.component_name}${dataDict.quantity ? ' (' + dataDict.quantity + ' pack)' : ''}`
+        td1.innerHTML = `<a href='/${dataDict.component_type}/${dataDict._id}'>${dataDict.brand_name} ${dataDict.component_name}${dataDict.quantity ? ' (' + dataDict.quantity + ' pack)' : ''}</a>`
         td2.innerText = String(basePrice);
         td3.innerText = quantity
         td4.innerText = promo.toFixed(2);
