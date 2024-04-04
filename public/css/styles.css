@@ -151,9 +151,33 @@ a.admin_button {
     float:initial;
 }
 
+.modal-form {
+    /* border: 1px solid magenta; */
+    display: grid;
+    grid-template-areas: a b;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.modal-form  {
+    display:block;
+    /* December 2023 update lets you use nesting in pure CSS */
+    & label {
+        border: 1px solid green;
+        grid-area: a;
+
+    }
+    & input,
+    & select {
+        grid-area: b;
+        border: 1px solid blue;
+    }
+}
+
 
 /*  form control */
 /* begin stealing from bootstrap */
+/*
 .form-control{
     display:block;
     width:100%;
@@ -241,4 +265,5 @@ select.form-control:focus::-ms-value{color:#495057;background-color:#fff}
 .form-inline .form-check{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:auto;padding-left:0}
 .form-inline .form-check-input{position:relative;margin-top:0;margin-right:.25rem;margin-left:0}
 .form-inline .custom-control{-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-.form-inline .custom-control-label{margin-bottom:0}}
+.form-inline .custom-control-label{margin-bottom:0}} 
+*/

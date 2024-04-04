@@ -343,7 +343,10 @@ function getTotal(arr){
                 qty = dataset.quantity_needed;
             }
             basetotal += dataset.price * qty
-            taxtotal += dataset.price * qty * universal_tax_rate
+            if(!dataset.custom_part_type){
+                
+                taxtotal += dataset.price * qty * universal_tax_rate
+            }
             // shippingtotal += universal_shipping_cost
             // promototal += universal_promo;
         }
