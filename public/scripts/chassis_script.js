@@ -45,8 +45,9 @@ window.onload = async () => {
         let td9 = document.createElement('td')
         let td10 = document.createElement('td')
         let td11 = document.createElement('td')
+        const displayString = `<a href='/chassis/${c._id}'>${c.component_name}</a>`;
         td1.innerText = c.brand_name
-        td2.innerText = c.component_name
+        td2.innerHTML = displayString
         td3.innerText = c.number_of_keys
         td4.innerText = c.keyboard_layout
         td5.innerText = c.price

@@ -4,14 +4,21 @@ const PORT = 3000
 const path = require('path')
 const fs = require('fs')
 const bodyParser = require('body-parser')
+const mustacheExpress = require('mustache-express')
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://127.0.0.1:27017/mkpartpicker')
+
 const chassis_model = require('./models/chassis_model');
 const switches_model = require('./models/switches_model');
 const keycaps_model = require('./models/keycaps_model');
 const custom_part_model = require('./models/custom_part_model');
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
+app.set('views', path.join(__dirname,'/views'))
+app.set('view engine', 'mustache');
+app.engine('mustache', mustacheExpress())
+
 app.get('/chassis_selection', (req, res) => {
     const fp = path.join(path.join(__dirname, 'public/chassis_selection.html'))
     res.sendFile(fp)
@@ -210,6 +217,13 @@ app.post('/client/add-part', async (req, res) => {
     })
     const response = await submittedPart.save()
     res.send('Successfully saved custom submission')
+})
+
+app.get('/chassis/:id', async (req, res) => {
+    const retrievedPart = await chassis_model.findById(req.params.id);
+    res.render('chassis_view', {data: retrievedPart})
+    // res.json(retrievedPart);
+    // res.send('meow');
 })
 
 

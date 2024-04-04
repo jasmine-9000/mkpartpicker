@@ -26,8 +26,10 @@ window.onload = async () => {
         const tax = Math.round(Number(baseTotal) * universal_tax_rate*100) / 100;
         const shipping = universal_shipping_cost;
         const promo = universal_promo;
+        const displayString = `<a href='/switches/${dSwitch._id}'>${dSwitch.component_name}</a>`;
+        console.log(displayString);
         td1.innerHTML = dSwitch.brand_name;
-        td2.innerText = dSwitch.component_name;
+        td2.innerHTML = displayString;
         td3.innerText = dSwitch.style_of_switch;
         td4.innerText = String(dSwitch.quantity);
         td5.innerText = String(pricePerSwitch)
