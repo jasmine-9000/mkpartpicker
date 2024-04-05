@@ -25,12 +25,48 @@
     <rect fill="white" x="605" y = "5" width="90" height="90" rx="15"/>
 
     <!--f9 f10 f11 f12-->
-    <rect x="300" width="100" y = "0" height="100" rx="15"/>
-    <rect fill="white" x="305" y = "5" width="90" height="90" rx="15"/>
-    <rect x="400" width="100" y = "0" height="100" rx="15"/>
-    <rect fill="white" x="405" y = "5" width="90" height="90" rx="15"/>
-    <rect x="500" width="100" y = "0" height="100" rx="15"/>
-    <rect fill="white" x="505" y = "5" width="90" height="90" rx="15"/>
-    <rect x="600" width="100" y = "0" height="100" rx="15"/>
-    <rect fill="white" x="605" y = "5" width="90" height="90" rx="15"/>
+    <rect x="780" width="100" y = "0" height="100" rx="15"/>
+    <rect fill="white" x="785" y = "5" width="90" height="90" rx="15"/>
+    <rect x="880" width="100" y = "0" height="100" rx="15"/>
+    <rect fill="white" x="885" y = "5" width="90" height="90" rx="15"/>
+    <rect x="980" width="100" y = "0" height="100" rx="15"/>
+    <rect fill="white" x="985" y = "5" width="90" height="90" rx="15"/>
+    <rect x="1080" width="100" y = "0" height="100" rx="15"/>
+    <rect fill="white" x="1085" y = "5" width="90" height="90" rx="15"/>
+
+    <!-- ~1234567890-=backspace -->
+    <!-- ~12345-->
+    <rect x="-420" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="-415" y = "135" width="90" height="90" rx="15"/>
+    <rect x="-300" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="-295" y = "135" width="90" height="90" rx="15"/>
+    <rect x="-180" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="-175" y = "135" width="90" height="90" rx="15"/>
+    <rect x="-60" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="-55" y = "135" width="90" height="90" rx="15"/>
+    <rect x="60" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="65" y = "135" width="90" height="90" rx="15"/>
+    <rect x="180" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="185" y = "135" width="90" height="90" rx="15"/>
+    <rect x="300" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="305" y = "135" width="90" height="90" rx="15"/>
+    <rect x="420" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="425" y = "135" width="90" height="90" rx="15"/>
+    <rect x="540" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="545" y = "135" width="90" height="90" rx="15"/>
+    <rect x="660" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="665" y = "135" width="90" height="90" rx="15"/>
+    <rect x="780" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="785" y = "135" width="90" height="90" rx="15"/>
+    <rect x="900" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="905" y = "135" width="90" height="90" rx="15"/>
+    <rect x="1020" width="100" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="1025" y = "135" width="90" height="90" rx="15"/>
+    <!-- backspace -->
+    <rect x="1140" width="200" y = "130" height="100" rx="15"/>
+    <rect fill="white" x="1145" y = "135" width="190" height="90" rx="15"/>
+
+    <!-- tab key-->
+    <rect x="-420" width="125" y = "250" height="100" rx="15"/>
+    <rect fill="white" x="-415" y = "255" width="115" height="90" rx="15"/>
 </svg>
