@@ -20,16 +20,19 @@ app.set('view engine', 'mustache');
 app.engine('mustache', mustacheExpress())
 
 app.get('/chassis_selection', (req, res) => {
-    const fp = path.join(path.join(__dirname, 'public/chassis_selection.html'))
-    res.sendFile(fp)
+    res.render('chassis_select');
+    // const fp = path.join(path.join(__dirname, 'public/chassis_selection.html'))
+    // res.sendFile(fp)
 })
 app.get('/switches_selection', (req, res) => {
-    const fp = path.join(path.join(__dirname, 'public/switches_selection.html'))
-    res.sendFile(fp)
+    res.render('switches_select');
+    // const fp = path.join(path.join(__dirname, 'public/switches_selection.html'))
+    // res.sendFile(fp)
 })
 app.get('/keycaps_selection', (req, res) => {
-    const fp = path.join(path.join(__dirname, 'public/keycap_selection.html'))
-    res.sendFile(fp)
+    res.render('keycaps_select');
+    // const fp = path.join(path.join(__dirname, 'public/keycap_selection.html'))
+    // res.sendFile(fp)
 })
 app.get('/completed-builds', (req, res) => {
     const fp = path.join(path.join(__dirname, 'public/completed_builds.html'))
@@ -80,28 +83,6 @@ app.get('/data/switches', async (req, res) => {
     res.json(doc);
 })
 app.get('/data/keycaps', async (req, res) => {
-    // const dummyData = {
-    //     [
-    //         {
-    //             brand_name: 'Monsgeek'
-    //         }
-    //     ]
-    // }
-    // const dummyData = [
-    //     {
-    //         _id: 'ABCD',
-    //         brand_name: 'Monsgeek',
-    //         component_name: 'Panda Keycap set',
-    //         hyperlink: 'https://google.com',
-    //         layouts_supported: [
-    //             'a',
-    //             'b',
-    //             'c'
-    //         ],
-    //         price: 39.99,
-    //         vendor_name: 'Monsgeek'
-    //     }
-    // ]
     const doc = await keycaps_model.find()
     res.json(doc)
 })
@@ -221,7 +202,9 @@ app.post('/client/add-part', async (req, res) => {
 
 app.get('/chassis/:id', async (req, res) => {
     const retrievedPart = await chassis_model.findById(req.params.id);
-    res.render('chassis_view', {data: retrievedPart})
+    res.render('chassis_view', {
+        data: retrievedPart}
+    )
     // res.json(retrievedPart);
     // res.send('meow');
 })

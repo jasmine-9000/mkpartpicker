@@ -47,6 +47,22 @@ nav ul.navigation--links li {
     padding: 10px 20px;
 }
 
+nav .logo-div {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    span {
+        display:inline-block;
+        font-size: 0.875rem;
+        line-height:1.15;
+        font-weight:700;
+
+    }
+    .logo {
+        height: 5rem;
+    }
+}
+
 /* table styles */
 /* table {
     border: 2px solid #e4e4e4;

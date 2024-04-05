@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 1322.8347 536.69344"
+   version="1.1"
+   id="svg761"
+   sodipodi:docname="keyboard-modified.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   width="350mm"
+   height="142mm">
+  <metadata
+     id="metadata767">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs765" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview763"
+     showgrid="false"
+     inkscape:zoom="0.54640069"
+     inkscape:cx="296.60064"
+     inkscape:cy="1.078154"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg761"
+     units="mm"
+     width="1188mm" />
+  <!-- esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 prtsc sclk pause-->
+  <!-- esc -->
+  <rect
+     x="46.028198"
+     width="68.823532"
+     y="49.579575"
+     height="61.847263"
+     rx="10.32353"
+     id="rect439"
+     style="stroke-width:0.652422" />
+  <rect
+     fill="#ffffff"
+     x="49.469368"
+     y="52.671936"
+     width="61.941177"
+     height="55.662537"
+     rx="10.32353"
+     id="rect441"
+     style="stroke-width:0.652422" />
+  <g
+     id="function1234"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <!-- f1 f2 f3 f4 -->
+    <rect
+       x="-180"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect443" />
+    <rect
+       fill="#ffffff"
+       x="-175"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect445" />
+    <rect
+       x="-60"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect447" />
+    <rect
+       fill="#ffffff"
+       x="-55"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect449" />
+    <rect
+       x="60"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect451" />
+    <rect
+       fill="#ffffff"
+       x="65"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect453" />
+    <rect
+       x="180"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect455" />
+    <rect
+       fill="#ffffff"
+       x="185"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect457" />
+  </g>
+  <!--f5 f6 f7 f8 -->
+  <g
+     id="function5678"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="370"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect460" />
+    <rect
+       fill="#ffffff"
+       x="375"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect462" />
+    <rect
+       x="490"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect464" />
+    <rect
+       fill="#ffffff"
+       x="495"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect466" />
+    <rect
+       x="610"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect468" />
+    <rect
+       fill="#ffffff"
+       x="615"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect470" />
+    <rect
+       x="730"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect472" />
+    <rect
+       fill="#ffffff"
+       x="735"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect474" />
+  </g>
+  <g
+     id="function9101112"
+     fill="#000000"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <!--f9 f10 f11 f12-->
+    <rect
+       x="880"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect477" />
+    <rect
+       fill="#ffffff"
+       x="885"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect479" />
+    <rect
+       x="1000"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect481" />
+    <rect
+       fill="#ffffff"
+       x="1005"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect483" />
+    <rect
+       x="1120"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect485" />
+    <rect
+       fill="#ffffff"
+       x="1125"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect487" />
+    <rect
+       x="1240"
+       width="100"
+       y="50"
+       height="100"
+       rx="15"
+       id="rect489" />
+    <rect
+       fill="#ffffff"
+       x="1245"
+       y="55"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect491" />
+  </g>
+  <!-- ~1234567890-=backspace -->
+  <!-- ~12345-->
+  <g
+     id="~1234567890-+"
+     fill="#000000"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="-420"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect494" />
+    <rect
+       fill="#ffffff"
+       x="-415"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect496" />
+    <rect
+       x="-300"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect498" />
+    <rect
+       fill="#ffffff"
+       x="-295"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect500" />
+    <rect
+       x="-180"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect502" />
+    <rect
+       fill="#ffffff"
+       x="-175"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect504" />
+    <rect
+       x="-60"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect506" />
+    <rect
+       fill="#ffffff"
+       x="-55"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect508" />
+    <rect
+       x="60"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect510" />
+    <rect
+       fill="#ffffff"
+       x="65"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect512" />
+    <rect
+       x="180"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect514" />
+    <rect
+       fill="#ffffff"
+       x="185"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect516" />
+    <rect
+       x="300"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect518" />
+    <rect
+       fill="#ffffff"
+       x="305"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect520" />
+    <rect
+       x="420"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect522" />
+    <rect
+       fill="#ffffff"
+       x="425"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect524" />
+    <rect
+       x="540"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect526" />
+    <rect
+       fill="#ffffff"
+       x="545"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect528" />
+    <rect
+       x="660"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect530" />
+    <rect
+       fill="#ffffff"
+       x="665"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect532" />
+    <rect
+       x="780"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect534" />
+    <rect
+       fill="#ffffff"
+       x="785"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect536" />
+    <rect
+       x="900"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect538" />
+    <rect
+       fill="#ffffff"
+       x="905"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect540" />
+    <rect
+       x="1020"
+       width="100"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect542" />
+    <rect
+       fill="#ffffff"
+       x="1025"
+       y="185"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect544" />
+  </g>
+  <!-- backspace -->
+  <g
+     id="backspace"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="1140"
+       width="200"
+       y="180"
+       height="100"
+       rx="15"
+       id="rect547" />
+    <rect
+       fill="#ffffff"
+       x="1145"
+       y="185"
+       width="190"
+       height="90"
+       rx="15"
+       id="rect549" />
+  </g>
+  <!-- tab key-->
+  <g
+     id="g556"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="-420"
+       width="125"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect552" />
+    <rect
+       fill="#ffffff"
+       x="-415"
+       y="305"
+       width="115"
+       height="90"
+       rx="15"
+       id="rect554" />
+  </g>
+  <!-- qwertyuiop[]\-->
+  <g
+     id="qwertyuiop[]\"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="-280"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect558" />
+    <rect
+       fill="#ffffff"
+       x="-275"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect560" />
+    <rect
+       x="-160"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect562" />
+    <rect
+       fill="#ffffff"
+       x="-155"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect564" />
+    <rect
+       x="-40"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect566" />
+    <rect
+       fill="#ffffff"
+       x="-35"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect568" />
+    <rect
+       x="80"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect570" />
+    <rect
+       fill="#ffffff"
+       x="85"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect572" />
+    <rect
+       x="200"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect574" />
+    <rect
+       fill="#ffffff"
+       x="205"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect576" />
+    <rect
+       x="320"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect578" />
+    <rect
+       fill="#ffffff"
+       x="325"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect580" />
+    <rect
+       x="440"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect582" />
+    <rect
+       fill="#ffffff"
+       x="445"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect584" />
+    <rect
+       x="560"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect586" />
+    <rect
+       fill="#ffffff"
+       x="565"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect588" />
+    <rect
+       x="680"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect590" />
+    <rect
+       fill="#ffffff"
+       x="685"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect592" />
+    <rect
+       x="800"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect594" />
+    <rect
+       fill="#ffffff"
+       x="805"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect596" />
+    <rect
+       x="920"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect598" />
+    <rect
+       fill="#ffffff"
+       x="925"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect600" />
+    <rect
+       x="1040"
+       width="100"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect602" />
+    <rect
+       fill="#ffffff"
+       x="1045"
+       y="305"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect604" />
+    <rect
+       x="1160"
+       width="180"
+       y="300"
+       height="100"
+       rx="15"
+       id="rect606" />
+    <rect
+       fill="#ffffff"
+       x="1165"
+       y="305"
+       width="170"
+       height="90"
+       rx="15"
+       id="rect608" />
+  </g>
+  <!-- caps lock-->
+  <g
+     id="caps_lock"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="-420"
+       width="150"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect611" />
+    <rect
+       fill="#ffffff"
+       x="-415"
+       y="425"
+       width="140"
+       height="90"
+       rx="15"
+       id="rect613" />
+  </g>
+  <g
+     id="asdfghjkl;'"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="-250"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect616" />
+    <rect
+       fill="#ffffff"
+       x="-245"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect618" />
+    <rect
+       x="-130"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect620" />
+    <rect
+       fill="#ffffff"
+       x="-125"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect622" />
+    <rect
+       x="-10"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect624" />
+    <rect
+       fill="#ffffff"
+       x="-5"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect626" />
+    <rect
+       x="110"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect628" />
+    <rect
+       fill="#ffffff"
+       x="115"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect630" />
+    <rect
+       x="230"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect632" />
+    <rect
+       fill="#ffffff"
+       x="235"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect634" />
+    <rect
+       x="350"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect636" />
+    <rect
+       fill="#ffffff"
+       x="355"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect638" />
+    <rect
+       x="470"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect640" />
+    <rect
+       fill="#ffffff"
+       x="475"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect642" />
+    <rect
+       x="590"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect644" />
+    <rect
+       fill="#ffffff"
+       x="595"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect646" />
+    <rect
+       x="710"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect648" />
+    <rect
+       fill="#ffffff"
+       x="715"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect650" />
+    <rect
+       x="830"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect652" />
+    <rect
+       fill="#ffffff"
+       x="835"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect654" />
+    <rect
+       x="950"
+       width="100"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect656" />
+    <rect
+       fill="#ffffff"
+       x="955"
+       y="425"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect658" />
+  </g>
+  <!-- return key-->
+  <g
+     id="return_key"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="1070"
+       width="270"
+       y="420"
+       height="100"
+       rx="15"
+       id="rect661" />
+    <rect
+       fill="#ffffff"
+       x="1075"
+       y="425"
+       width="260"
+       height="90"
+       rx="15"
+       id="rect663" />
+  </g>
+  <g
+     id="left_shift"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <!-- left shift key-->
+    <rect
+       x="-420"
+       width="200"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect666" />
+    <rect
+       fill="#ffffff"
+       x="-415"
+       y="545"
+       width="190"
+       height="90"
+       rx="15"
+       id="rect668" />
+  </g>
+  <!-- zxcvbnm,./-->
+  <g
+     id="zxcvbnm,./"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="-200"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect671" />
+    <rect
+       fill="#ffffff"
+       x="-195"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect673" />
+    <rect
+       x="-80"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect675" />
+    <rect
+       fill="#ffffff"
+       x="-75"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect677" />
+    <rect
+       x="40"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect679" />
+    <rect
+       fill="#ffffff"
+       x="45"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect681" />
+    <rect
+       x="160"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect683" />
+    <rect
+       fill="#ffffff"
+       x="165"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect685" />
+    <rect
+       x="280"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect687" />
+    <rect
+       fill="#ffffff"
+       x="285"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect689" />
+    <rect
+       x="400"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect691" />
+    <rect
+       fill="#ffffff"
+       x="405"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect693" />
+    <rect
+       x="520"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect695" />
+    <rect
+       fill="#ffffff"
+       x="525"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect697" />
+    <rect
+       x="640"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect699" />
+    <rect
+       fill="#ffffff"
+       x="645"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect701" />
+    <rect
+       x="760"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect703" />
+    <rect
+       fill="#ffffff"
+       x="765"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect705" />
+    <rect
+       x="880"
+       width="100"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect707" />
+    <rect
+       fill="#ffffff"
+       x="885"
+       y="545"
+       width="90"
+       height="90"
+       rx="15"
+       id="rect709" />
+  </g>
+  <g
+     id="right_shift"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <rect
+       x="1000"
+       width="340"
+       y="540"
+       height="100"
+       rx="15"
+       id="rect712" />
+    <rect
+       fill="#ffffff"
+       x="1005"
+       y="545"
+       width="330"
+       height="90"
+       rx="15"
+       id="rect714" />
+  </g>
+  <!-- ctrl wni alt space alt fn menu ctrl-->
+  <g
+     id="bottom_row"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <!-- left ctrl-->
+    <rect
+       x="-420"
+       width="135"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect717" />
+    <rect
+       fill="#ffffff"
+       x="-415"
+       y="665"
+       width="125"
+       height="90"
+       rx="15"
+       id="rect719" />
+    <!-- win-->
+    <rect
+       x="-260"
+       width="135"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect721" />
+    <rect
+       fill="#ffffff"
+       x="-255"
+       y="665"
+       width="125"
+       height="90"
+       rx="15"
+       id="rect723" />
+    <!-- alt -->
+    <rect
+       x="-100"
+       width="125"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect725" />
+    <rect
+       fill="#ffffff"
+       x="-95"
+       y="665"
+       width="115"
+       height="90"
+       rx="15"
+       id="rect727" />
+    <!-- space -->
+    <rect
+       x="60"
+       width="700"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect729" />
+    <rect
+       fill="#ffffff"
+       x="65"
+       y="665"
+       width="690"
+       height="90"
+       rx="15"
+       id="rect731" />
+    <!-- alt -->
+    <rect
+       x="780"
+       width="125"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect733" />
+    <rect
+       fill="#ffffff"
+       x="785"
+       y="665"
+       width="115"
+       height="90"
+       rx="15"
+       id="rect735" />
+    <!-- fn -->
+    <rect
+       x="920"
+       width="125"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect737" />
+    <rect
+       fill="#ffffff"
+       x="925"
+       y="665"
+       width="115"
+       height="90"
+       rx="15"
+       id="rect739" />
+    <!-- menu -->
+    <rect
+       x="1070"
+       width="125"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect741" />
+    <rect
+       fill="#ffffff"
+       x="1075"
+       y="665"
+       width="115"
+       height="90"
+       rx="15"
+       id="rect743" />
+    <!-- right ctlr-->
+    <rect
+       x="1215"
+       width="125"
+       y="660"
+       height="100"
+       rx="15"
+       id="rect745" />
+    <rect
+       fill="#ffffff"
+       x="1220"
+       y="665"
+       width="115"
+       height="90"
+       rx="15"
+       id="rect747" />
+  </g>
+  <!-- drawing on the keys -->
+  <g
+     id="text"
+     fill="none"
+     transform="matrix(0.6882353,0,0,0.61847264,335.08702,18.655943)">
+    <!--  esc-->
+    <text
+       x="-400"
+       y="60"
+       style="font-size:36px;font-family:Arial"
+       id="text750">Esc</text>
+    <!-- f1-->
+    <text
+       x="-150"
+       y="60"
+       style="font-size:36px;font-family:Arial"
+       id="text752">F1</text>
+    <text
+       x="-50"
+       y="60"
+       style="font-size:36px;font-family:Arial"
+       id="text754">F2</text>
+    <text
+       x="50"
+       y="60"
+       style="font-size:36px;font-family:Arial"
+       id="text756">F3</text>
+    <text
+       x="150"
+       y="60"
+       style="font-size:36px;font-family:Arial"
+       id="text758">F4</text>
+  </g>
+  <!-- <path fill="black" d="M300 300 H 90 V 90 H 10 L 10 10"/> -->
+</svg>
