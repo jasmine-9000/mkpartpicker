@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Parts - MKPartPicker</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    {{>partials/navigation}}
+    <main>
+
+        <h1>Choose Your Parts</h1>
+        <p class="disclaimers" style="line-height:1.5; font-weight: 700;">
+            Compatibility filter is not implemented<br>
+            Shipping costs not included at this time<br>
+            Promotion discounts not included at this time.
+        </p>
+        <table class='builder-table'>
+            <thead>
+                <td>Component</td>
+                <td>Selection</td>
+                <td>Base</td>
+                <td>Quantity Needed</td>
+                <td>Promo</td>
+                <td>Shipping</td>
+                <td>Tax</td>
+                <td>Price</td>
+                <td>Where</td>
+                <td></td>
+            </thead>
+            <tbody id="builder-table-rows">
+                <tr id="message_display_container">
+                    <td id="message_display_container" colspan="10">Loading...</td>
+                </tr>
+                <tr id="chassis_container" class="hidden">
+                    <td>Chassis </td>
+                    
+                </tr>
+                <tr id="switches_container" class="hidden">
+                    <td>Switches</td>
+                </tr>
+                <tr id="keycaps_container" class="hidden">
+                    <td>Key Caps</td>
+                </tr>
+                <tr id="custom_part_form_container" class="hidden">
+                    <td>Custom</td>
+                    <td>
+                        <a class="add_button" id="custom_part_button" href='#'>Add Custom Part</a>
+                    </td>
+                    <td colspan="8"></td>
+                </tr>
+                <tr class="keyboard--total hidden">
+                    <td colspan="7" style="text-align: right;">Base Total:</td>
+                    <td id="base_total"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="keyboard--total hidden">
+                    <td colspan="7" style="text-align: right;">Tax:</td>
+                    <td id="tax_total"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="keyboard--total hidden">
+                    <td colspan="7" style="text-align: right;">Grand Total:</td>
+                    <td id="grand_total"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- w3 schools version of a modal -->
+        {{>partials/custom_part_form}}
+        <!-- <table class="total-table">
+            
+        </table> -->
+        <!-- <div>
+            Base Total:&Tab; <span id='base_total'></span><br>
+            Tax:        &Tab;<span id='tax_total'></span><br>
+            Grand Total: <span id="grand_total"></span><br>
+        </div> -->
+        <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
+        <!-- <button onclick="setDummyCookie();">Meow</button> -->
+        <button onclick="clearCart();">Clear cart</button>
+        <hr>
+        <div id="admin-container">
+
+            <h3>Admin functions</h3>
+            <p >
+                
+                <a class="admin_button" href="/data/mongoose">See all chassis options in database</a><br>
+                <a class="admin_button" href="/data/switches">See all switch options in database</a><br>
+                <a class="admin_button" href="/admin/add-part">Add a new part</a><br>
+                <a class="admin_button" href="/admin/list-of-parts">See list of parts</a><br>
+                <a class="admin_button" href="#">Nuke server</a><br>
+            </p>
+        </div>
+
+    </main>
+</body>
+<script src="scripts/script.js"></script>
+<script>
+    // dummy script
+    function insertAfter(el, childdiv) {
+        childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling);
+    }
+    function dummyScript() {
+
+        let parentdiv = document.querySelector('#meow1')
+        let childdiv = document.querySelector('#meow3')
+        let newdiv = document.createElement('span');
+        newdiv.id = 'NEW_ELEMENT'
+        newdiv.innerHTML = `NEW ELEMENT!!!!<br>`
+        // parentdiv.insertBefore(newdiv, childdiv);
+        // childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling)
+        insertAfter(newdiv, childdiv);
+        console.log(document.querySelector('#NEW_ELEMENT'));
+    } 
+</script>
+</html>

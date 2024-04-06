@@ -19,6 +19,11 @@ app.set('views', path.join(__dirname,'/views'))
 app.set('view engine', 'mustache');
 app.engine('mustache', mustacheExpress())
 
+app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+    res.render('index');
+})
 app.get('/chassis_selection', (req, res) => {
     res.render('chassis_select');
     // const fp = path.join(path.join(__dirname, 'public/chassis_selection.html'))
@@ -46,7 +51,6 @@ app.get('/products', (req, res) => {
     const fp = path.join(path.join(__dirname, 'public/list_of_products.html'))
     res.sendFile(fp)
 })
-app.use(express.static('public'))
 
 app.get('/data', async (req, res) => {
     const doc = await chassis_model.find()
