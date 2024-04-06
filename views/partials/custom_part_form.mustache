@@ -2,14 +2,36 @@
     <div class="modal-content">
         <h1 style="display:inline-block;">Add Custom Part</h1>
         <span class="close" style="float:right;">&times;</span>
-        <!-- method="POST" action="/client/add-part" overridding this in javascript -->
-        <form class="modal-form" id="add-custom-part-form">
+        
+        <form style="width:50%;"
+            id="add-custom-part-form">
+            <div style="display:flex; 
+                        flex-direction:row;
+                        flex-wrap:wrap;
+                        ">
+                <label style="flex-grow:1"
+                    for="custom_part_name" >
+                    Part Name/Description
+                </label>
+                <input
+                    type='text' id="custom_part_name" name="custom_part_name">
                 
-            <!-- <div class="form-control modal-form-item"> -->
+                <label style="flex-grow:1"
+                    for="custom_part_type">
+                    Part Type</label>
+                <select name="custom_part_type" id="custom_part_type">
+                    <option value="Custom">Custom</option>
+                    <option value="Chassis">Chassis</option>
+                    <option value="Lube">Lube</option>
+                    <option value="Key Caps">Keycap set</option>
+                    <option value="Switches">Switches</option>
+                </select>
+            </div>
+            {{! <div class="form-control modal-form-item">
                 <label for="custom_part_name">Part Name/Description</label>
                 <input type='text' id="custom_part_name" name="custom_part_name">
-            <!-- </div>
-            <div class="form-control modal-form-item"> -->
+            </div>
+            <div class="form-control modal-form-item">
                 <label for="custom_part_type">Part Type</label>
                 <select name="custom_part_type" id="custom_part_type">
                     <option value="Custom">Custom</option>
@@ -18,20 +40,20 @@
                     <option value="Key Caps">Keycap set</option>
                     <option value="Switches">Switches</option>
                 </select>
-            <!-- </div>
-            <div class="form-control modal-form-item"> -->
+            </div>
+            <div class="form-control modal-form-item"> 
                 <label for="custom_part_hyperlink">Part URL: (optional)</label>
                 <input type="text" name="custom_part_hyperlink" id="custom_part_hyperlink">
-            <!-- </div> -->
-            <!-- <div class="form-control modal-form-item"> -->
+            </div> 
+            <div class="form-control modal-form-item">
                 <label for="custom_part_price">Part Price: (optional)</label>
                 <input type="number" name="custom_part_price" id="custom_part_price" step="0.01">
-            <!-- </div> -->
+            </div>
             <div class="modal-form-buttons">
 
                 <button type="submit">Add Custom Part</button>
                 <button type="button" class="close primary-close-button">Cancel</button>
-            </div>
+            </div> }}
             
         </form>
     </div>

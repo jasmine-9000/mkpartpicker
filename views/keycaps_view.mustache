@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{data.brand_name}} {{data.component_name}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    {{>partials/navigation}}
+    <main>
+
+        <h1>{{data.brand_name}} {{data.component_name}}</h1>
+        <p>{{data.model_number}}</p>
+        <p>From <a href='{{data.hyperlink}}'>{{data.vendor_name}}</a> - <span style="font-weight:700">{{data.price}}</span></p>
+        <h4>Layouts supported</h4>
+        <ul>
+            {{#data.layouts_supported}}
+                <li>{{.}}</li>
+            {{/data.layouts_supported}}
+        </ul>
+        <a href="../">Go back</a>
+    </main>
+</body>
+<script>
+    console.log(`a {{data}}`);
+</script>
+</html>

@@ -118,7 +118,7 @@ app.get('/data/keycaps/:keycap_id', async (req, res) => {
 
 // send the administor the form to add a part
 app.get('/admin/add-part', (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/admin-add-part.html'))
+    res.sendFile(path.join(__dirname, '/public/rigging_sites/admin-add-part.html'))
 })
 app.post('/admin/add-part', async (req,res) => {
     res.cookie
@@ -177,7 +177,53 @@ app.post('/admin/add-part', async (req,res) => {
             res.status(503).send('Internal Server Error: Not implemented');
             break;
         case 'keycaps':
-            res.status(503).send('Internal Server Error: Not implemented');
+            const compatibility_array = [];
+            const compatibility_names = ['tkl', 'fullsize', '75','70', '65','60','40', '1800', 'ortho', 'alice', 'macropad', 'numpad', 'ansi', 'iso']
+            const compatibility_dict = {
+                'tkl':'Tenkeyless',
+                'fullsize': 'Full Size', 
+                '75': '75%',
+                '70': '70%', 
+                '65': '65%',
+                '60': 'Compact (60%)',
+                '40': 'Compact (40%)', 
+                '1800': '1800 Layout', 
+                'ortho': 'Ortho layout',
+                'alice': 'Alice Split Layout', 
+                'macropad': 'Macropad', 
+                'numpad': 'Numpad', 
+                'ansi': 'ANSI - USA', 
+                'iso': 'ISO'
+            }
+            compatibility_names.forEach(name => {
+                const isCompatibible = req.body['keycap_compatibility_' + name] ? true : false
+                if(isCompatibible) {
+                    compatibility_array.push(compatibility_dict[name]);
+                }
+            })
+            // console.log(`
+            // <label for="keycap_compatibility_tkl">TKL</label>
+            // <input type="checkbox" name="keycap_compatibility_tkl">`)
+            const keycaps_doc = new keycaps_model({
+                brand_name: req.body['brand-name'], 
+                component_name: req.body['component-name'],
+                model_number: req.body['model_number'],
+                keycap_profile: req.body['keycap_profile'],
+                material_type: req.body['keycap_material_type'],
+                printing_details: req.body['printing_details'],
+                layouts_supported: compatibility_array,
+                price:Number(req.body['price']),
+                vendor_name: req.body['vendor_name'],
+                hyperlink:req.body['hyperlink'],
+                star_rating:5
+            })
+            const keycaps_response = await keycaps_doc.save();
+            if(keycaps_response === keycaps_doc) {
+                res.status(200).send('Successful')
+            } else {
+
+                res.status(400).send('Internal Server Error: Bad Form Request');
+            }
             break;
         case 'other':
             res.status(503).send('Internal Server Error: Not implemented');
@@ -211,6 +257,12 @@ app.get('/chassis/:id', async (req, res) => {
     )
     // res.json(retrievedPart);
     // res.send('meow');
+})
+app.get('/keycaps/:id', async (req, res) => {
+    const retrievedPart = await keycaps_model.findById(req.params.id);
+    res.render('keycaps_view', {
+        data: retrievedPart
+    } )
 })
 
 

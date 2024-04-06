@@ -28,8 +28,8 @@
                 <select id="type-of-part" name="type-of-part">
                     <option value="lube">Lube</option>
                     <option value="chassis" >Chassis</option>
-                    <option value="keycaps">Key Caps</option>
-                    <option value="switches" selected="selected">Switches</option>
+                    <option value="keycaps" selected="selected">Key Caps</option>
+                    <option value="switches" >Switches</option>
                     <option value="other">Other</option>             
                 </select>
             </div>
@@ -68,6 +68,7 @@
                             <option value="tkl">Tenkeyless (TKL)</option>
                             <option value="compact-60">Compact (60%)</option>
                             <option value="compact-75">75%</option>
+                            <option value="compact-70">70%</option>
                             <option value="compact-65">65%</option>
                             <option value="compact-40">40%</option>
                             <option value="1800">1800 layout</option>
@@ -81,7 +82,7 @@
                         </select>
                     </div>
                 </div>
-                <div id="switch-options">
+                <div id="switch-options" class="hidden">
                     
                     <h1 style="float:right;">TODO: add more switch options</h1>
                     <div class="form-control">
@@ -126,7 +127,7 @@
         <div id="lube-options" class="hidden">
             <h1>TODO: add lube options</h1>
         </div>
-        <div id="keycap-options" class="hidden">
+        <div id="keycap-options" class="">
             <h1>TODO: add keycap options</h1>
             <div class="form-control">
                 <label for="keycap_profile">Keycap Profile</label>
@@ -166,7 +167,61 @@
                         `
                         detailContainer.innerHTML = detailString;
                     })
-                    </script>
+                </script>
+                
+            </div>
+            <div class="form-control">
+                <label for="keycap_material_type">
+                    Material Type
+                </label>
+                <select id="keycap_material_type" name="keycap_material_type">
+                    <option value="PBT" selected>PBT</option>
+                    <option value="ABS">ABS</option>
+                </select>
+            </div>
+            <div class="form-control">
+                
+                <label for="printing_details">
+                    Method of printing details (optional)
+                </label>
+                <input type="text" value="dye-sub" id="printing_details" name="printing_details">
+            </div>
+            <div class="form-control" style="border: 1px solid black;">
+                <h4>Compatible Keyboard Sizes</h4>
+                <label for="keycap_compatibility_tkl">TKL</label>
+                <input type="checkbox" name="keycap_compatibility_tkl">
+                <label for="keycap_compatibility_fullsize">Full Size</label>
+                <input type="checkbox" name="keycap_compatibility_fullsize">
+                <label for="keycap_compatibility_75">75%</label>
+                <input type="checkbox" name="keycap_compatibility_75">
+                <label for="keycap_compatibility_70">70%</label>
+                <input type="checkbox" name="keycap_compatibility_70">
+                <label for="keycap_compatibility_65">65%</label>
+                <input type="checkbox" name="keycap_compatibility_65">
+                <label for="keycap_compatibility_60">60%</label>
+                <input type="checkbox" name="keycap_compatibility_60">
+                <label for="keycap_compatibility_40">40%</label>
+                <input type="checkbox" name="keycap_compatibility_40">
+                <label for="keycap_compatibility_1800">1800 layout</label>
+                <input type="checkbox" name="keycap_compatibility_1800">
+                <br>
+                
+                <label for="keycap_compatibility_ortho">Ortho</label>
+                <input type="checkbox" name="keycap_compatibility_ortho">
+                <label for="keycap_compatibility_alice">Alice Split</label>
+                <input type="checkbox" name="keycap_compatibility_alice">
+                <label for="keycap_compatibility_macropad">Macropad</label>
+                <input type="checkbox" name="keycap_compatibility_macropad">
+                <label for="keycap_compatibility_numpad">Numpad</label>
+                <input type="checkbox" name="keycap_compatibility_numpad">
+                <br>
+                
+                <label for="keycap_compatibility_ansi">ANSI</label>
+                <input type="checkbox" name="keycap_compatibility_ansi">
+                
+                <label for="keycap_compatibility_iso">ISO</label>
+                <input type="checkbox" name="keycap_compatibility_iso">
+
             </div>
         </div>
         <div id="other-options" class="hidden">

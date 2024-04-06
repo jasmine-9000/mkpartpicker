@@ -72,16 +72,7 @@
         </table>
         <!-- w3 schools version of a modal -->
         {{>partials/custom_part_form}}
-        <!-- <table class="total-table">
-            
-        </table> -->
-        <!-- <div>
-            Base Total:&Tab; <span id='base_total'></span><br>
-            Tax:        &Tab;<span id='tax_total'></span><br>
-            Grand Total: <span id="grand_total"></span><br>
-        </div> -->
         <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
-        <!-- <button onclick="setDummyCookie();">Meow</button> -->
         <button onclick="clearCart();">Clear cart</button>
         <hr>
         <div id="admin-container">
@@ -101,21 +92,7 @@
 </body>
 <script src="scripts/script.js"></script>
 <script>
-    // dummy script
-    function insertAfter(el, childdiv) {
-        childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling);
-    }
-    function dummyScript() {
-
-        let parentdiv = document.querySelector('#meow1')
-        let childdiv = document.querySelector('#meow3')
-        let newdiv = document.createElement('span');
-        newdiv.id = 'NEW_ELEMENT'
-        newdiv.innerHTML = `NEW ELEMENT!!!!<br>`
-        // parentdiv.insertBefore(newdiv, childdiv);
-        // childdiv.parentNode.insertBefore(newdiv, childdiv.nextSibling)
-        insertAfter(newdiv, childdiv);
-        console.log(document.querySelector('#NEW_ELEMENT'));
-    } 
+    var x = document.getElementById('function5678')
+    x.classList.add('fillRed')
 </script>
 </html>

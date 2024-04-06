@@ -151,7 +151,7 @@ a.admin_button {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #888888;
     width: 80%;
 }
 
@@ -172,8 +172,9 @@ a.admin_button {
     float:initial;
 }
 
+/*
 .modal-form {
-    /* border: 1px solid magenta; */
+    border: 1px solid magenta;
     display: grid;
     grid-template-areas: a b;
     grid-template-rows: 1fr 1fr;
@@ -182,7 +183,6 @@ a.admin_button {
 
 .modal-form  {
     display:block;
-    /* December 2023 update lets you use nesting in pure CSS */
     & label {
         border: 1px solid green;
         grid-area: a;
@@ -194,6 +194,7 @@ a.admin_button {
         border: 1px solid blue;
     }
 }
+*/
 
 
 /*  form control */
