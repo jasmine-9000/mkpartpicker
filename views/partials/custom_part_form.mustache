@@ -1,38 +1,59 @@
+<style>
+    input, input[type=text], input[type=password], input[type=email], input[type=number], textarea, .textarea, select, option
+    {
+        line-height: 1.5;
+        border-radius: 0.25
+    }
+    select option  {
+        color: magenta;
+        line-height: 1.5;
+    }
+    select {
+        padding: 0.375rem 2rem 0.375rem 0.5rem
+    }
+    #add-custom-part-form {
+        display:flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        gap: 0.825rem;
+    }
+    .form-control {
+        width:100%; 
+        flex: 1 1 auto;
+    }
+    .form-control label {
+        display:inline-block;
+        width: 40%;
+    }
+    .form-control input {
+        padding-inline: 0.17lh 0.4lh;
+        width: 30ch;
+    }
+    .form-control select {
+        width: 30ch;
+    }
+
+</style>
 <div id="myModal" class="modal">
     <div class="modal-content">
         <h1 style="display:inline-block;">Add Custom Part</h1>
         <span class="close" style="float:right;">&times;</span>
         
-        <form style="width:50%;"
+        <form style=""
             id="add-custom-part-form">
-            <div style="display:flex; 
-                        flex-direction:row;
-                        flex-wrap:wrap;
-                        ">
-                <label style="flex-grow:1"
+            <div class="form-control">
+                <label
                     for="custom_part_name" >
                     Part Name/Description
                 </label>
-                <input
+                <input style=""
                     type='text' id="custom_part_name" name="custom_part_name">
-                
-                <label style="flex-grow:1"
-                    for="custom_part_type">
-                    Part Type</label>
-                <select name="custom_part_type" id="custom_part_type">
-                    <option value="Custom">Custom</option>
-                    <option value="Chassis">Chassis</option>
-                    <option value="Lube">Lube</option>
-                    <option value="Key Caps">Keycap set</option>
-                    <option value="Switches">Switches</option>
-                </select>
             </div>
-            {{! <div class="form-control modal-form-item">
-                <label for="custom_part_name">Part Name/Description</label>
-                <input type='text' id="custom_part_name" name="custom_part_name">
-            </div>
-            <div class="form-control modal-form-item">
-                <label for="custom_part_type">Part Type</label>
+            <div class="form-control">
+
+                <label for="custom_part_type">
+                    Part Type
+                </label>
                 <select name="custom_part_type" id="custom_part_type">
                     <option value="Custom">Custom</option>
                     <option value="Chassis">Chassis</option>
@@ -49,11 +70,27 @@
                 <label for="custom_part_price">Part Price: (optional)</label>
                 <input type="number" name="custom_part_price" id="custom_part_price" step="0.01">
             </div>
+            
+            {{! <div class="form-control modal-form-item">
+                <label for="custom_part_name">Part Name/Description</label>
+                <input type='text' id="custom_part_name" name="custom_part_name">
+            </div> }}
+            {{! <div class="form-control modal-form-item">
+                <label for="custom_part_type">Part Type</label>
+                <select name="custom_part_type" id="custom_part_type">
+                    <option value="Custom">Custom</option>
+                    <option value="Chassis">Chassis</option>
+                    <option value="Lube">Lube</option>
+                    <option value="Key Caps">Keycap set</option>
+                    <option value="Switches">Switches</option>
+                </select>
+            </div> }}
+            
             <div class="modal-form-buttons">
 
                 <button type="submit">Add Custom Part</button>
                 <button type="button" class="close primary-close-button">Cancel</button>
-            </div> }}
+            </div>
             
         </form>
     </div>
