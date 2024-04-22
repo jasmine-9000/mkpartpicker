@@ -5,7 +5,7 @@ var universal_promo = 0
 
 var isAdmin = true;
 var isDebuggingLoadScreen = false;
-var isDebuggingModalScreen = true; 
+var isDebuggingModalScreen = false; 
 
 // make interactions happen only after window loads
 window.onload = async () => {
@@ -241,7 +241,7 @@ function loadDataIntoCustomTableRow(tableRowIdString, dataDict, quantity=1) {
 
 
     td9.innerHTML = `<a href='${dataDict.custom_part_hyperlink}'>${displayString}</a>`
-    td10.innerHTML = `<span class='close' onclick='removeSelf("custom", "${dataDict._id}")' >&times;</span>`
+    td10.innerHTML = `<span class='close x' onclick='removeSelf("custom", "${dataDict._id}")' >&times;</span>`
     container.appendChild(td1)
     container.appendChild(td2)
     container.appendChild(td3)
@@ -282,7 +282,7 @@ function loadDataIntoTableRow(tableRowIdString, dataDict, quantity=1) {
         td6.innerText = tax.toFixed(2);
         td7.innerText = total.toFixed(2);
         td8.innerHTML = `<a href='${dataDict.hyperlink}'>${dataDict.vendor_name}</a>`
-        td9.innerHTML = `<span class='close' onclick="removeSelf('${dataDict.component_type}','${dataDict._id}')">&times;</span>`
+        td9.innerHTML = `<span class='close x' onclick="removeSelf('${dataDict.component_type}','${dataDict._id}')">&times;</span>`
         container.appendChild(td1)
         container.appendChild(td2)
         container.appendChild(td3)

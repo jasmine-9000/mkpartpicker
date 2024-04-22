@@ -16,6 +16,7 @@
             Shipping costs not included at this time<br>
             Promotion discounts not included at this time.
         </p>
+        <button onclick="clearCart();">Clear cart</button>
         <table class='builder-table'>
             <thead>
                 <td>Component</td>
@@ -73,7 +74,7 @@
         <!-- w3 schools version of a modal -->
         {{>partials/custom_part_form}}
         <h1>No hyperlinks are vetted by MKPartPicker. Buy at your own risk!</h1>
-        <button onclick="clearCart();">Clear cart</button>
+        
         <hr>
         <div id="admin-container">
 
@@ -84,7 +85,7 @@
                 <a class="admin_button" href="/data/switches">See all switch options in database</a><br>
                 <a class="admin_button" href="/admin/add-part">Add a new part</a><br>
                 <a class="admin_button" href="/admin/list-of-parts">See list of parts</a><br>
-                <a class="admin_button" href="#">Nuke server</a><br>
+                <a class="admin_button" href="#" id="nuke_server_button">Nuke server</a><br>
             </p>
         </div>
 
